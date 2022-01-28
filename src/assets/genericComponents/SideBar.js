@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { PATH } from "../../config";
-import { FaHome, FaFileContract, FaHistory } from "react-icons/fa";
+import { FaFileContract, FaHistory } from "react-icons/fa";
 import { useAuth } from "../../Navigation/Auth/ProvideAuth";
 import { useCookies } from "react-cookie";
 import { BsFillPersonCheckFill } from "react-icons/bs";
 import { FiLogOut, FiUsers } from "react-icons/fi";
-import { IoMdArrowDropdown, IoMdSearch } from "react-icons/io";
+import { IoMdSearch } from "react-icons/io";
 import { GoPrimitiveDot } from "react-icons/go";
 import { GrHome, GrLineChart } from "react-icons/gr";
 import { CgImport } from "react-icons/cg";
