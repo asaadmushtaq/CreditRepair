@@ -1,0 +1,163 @@
+@media screen and (max-width: 768px) {
+  .eduteck-section {
+    top: 4.4rem;
+    left: 0;
+  }
+  .coursetabs_height_set {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+  }
+  #pricing-table .slick-slider .slick-list {
+    margin: 0rem !important;
+  }
+  .course-card {
+    min-width: 14rem;
+  }
+  .flex-direction-set {
+    flex-direction: column;
+  }
+  .explore-updated-screen .set-view-small-screen {
+    margin-right: 0 !important;
+  }
+  .eduteck-section .fb_button button,
+  .eduteck-section .google_button button,
+  .eduteck-section .linkd_button button {
+    width: 80%;
+  }
+  .eduteck-section h3 {
+    margin: 1rem 0;
+  }
+  .eduteck-section h6 {
+    margin-bottom: 2rem;
+  }
+  .or-text p {
+    margin-top: 2rem;
+  }
+  .login-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem 0;
+    border-radius: 12px;
+    z-index: 2;
+    border: 1px solid #00386e;
+  }
+  .login-navbar {
+    position: unset;
+  }
+  .login-navbar .container-fluid {
+    padding: 0 !important;
+  }
+  .login-navbar .navbar-nav .nav-link {
+    margin: 0.1rem 1rem;
+  }
+  .login-navbar .navbar-brand img {
+    display: block;
+    width: 115px;
+  }
+  .edutech-logo,
+  .cloudbase {
+    display: none;
+  }
+  .edutech-logo1 {
+    display: block;
+  }
+  .edutech-login {
+    top: 0;
+  }
+  .signup-page .card .card-title {
+    margin-bottom: 2rem;
+  }
+  .signup-page .card form .next_button {
+    margin-top: 1rem;
+  }
+  .eduteck-section .step-section .card {
+    width: 90%;
+  }
+  .add_to_cart .card {
+    display: block;
+    flex-direction: unset;
+    justify-content: normal;
+    height: auto;
+    padding: 1rem !important;
+  }
+  .add_to_cart .pricing_plan_btn {
+    margin-top: 1rem;
+  }
+  .set-smal-screen-size {
+    text-align: center !important;
+  }
+}
+@media (min-width: 992px) {
+  .side-bar-on {
+    padding-left: 320px;
+  }
+}
+@media (max-width: 992px) {
+  .teachergroupbtn {
+    position: unset !important;
+  }
+}
+@media (max-width: 500px) {
+  .course-card {
+    min-width: 100%;
+  }
+}
+@media (max-width: 1100px) {
+  .fone-view .current-progress-text,
+  .fone-view .continue-text,
+  .fone-view .recommendation-text {
+    display: block;
+  }
+  .web-view {
+    display: none;
+  }
+  .course_include_section svg {
+    margin: 0rem 0.5rem;
+  }
+  .course_include_section p {
+    font-size: 12px;
+  }
+  .add_to_cart .pricing_plan_btn {
+    font-size: 13px;
+  }
+  .add_to_cart .card {
+    padding: 0rem 1rem;
+  }
+}
+@media (min-width: 1800px) {
+  .recommendation-text {
+    margin-bottom: 2rem !important;
+  }
+}
+@media screen and (max-width: 1500px) and (min-width: 1200px) {
+  .continue-text {
+    margin-bottom: 0.25rem !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .set-view-small-screen h2 {
+    font-size: 24px;
+  }
+  .set-view-small-screen h5 {
+    font-size: 15px;
+  }
+  .set-view-small-screen p {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .course-card {
+    min-width: 18rem;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .diversity-font-size {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1500px) {
+  .coursetabs_height_set {
+    height: 100%;
+    min-height: calc(100vh - 26rem);
+  }
+}
