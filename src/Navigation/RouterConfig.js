@@ -41,6 +41,12 @@ export const RouterConfig = () => {
         <PublicRoute exact path={PATH.HOMEPAGE}>
           <WEB_PAGES.HOMEPAGE />
         </PublicRoute>
+        <PublicRoute exact path={PATH.ABOUTUS}>
+          <WEB_PAGES.ABOUTUS />
+        </PublicRoute>
+        <PublicRoute exact path={PATH.CONTACTUS}>
+          <WEB_PAGES.CONTACTUS />
+        </PublicRoute>
         {/* List all private routes here */}
         {/* <PrivateRoute exact path={PATH.PROFILESHOW}>
           <WEB_PAGES.PROFILESHOW />

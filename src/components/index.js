@@ -5,6 +5,8 @@ import login from "./Login";
 import ProfileEdit from "./Profile/ProfileEdit";
 import ProfileShow from "./Profile/ProfileShow";
 import HomePage from "./HomePage";
+import AboutUs from "./AboutUs";
+import ContactUs from "./Contact";
 
 class DynamicImport extends React.Component {
   state = {
@@ -33,7 +35,9 @@ const WEB_PAGES = {
   LOGIN: login,
   PROFILESHOW: ProfileShow,
   PROFILEEDIT: ProfileEdit,
-  HOMEPAGE: HomePage
+  HOMEPAGE: HomePage,
+  ABOUTUS: AboutUs,
+  CONTACTUS: ContactUs
 };
 
 export { WEB_PAGES };

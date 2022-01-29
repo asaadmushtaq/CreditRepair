@@ -6,6 +6,8 @@ const PATH = {
   HOMEPAGE: "/",
   PROFILEEDIT: "/profile-edit",
   PROFILESHOW: "/profile",
+  ABOUTUS: "/about-us",
+  CONTACTUS: "/contact-us"
 };
 
 const baseUrl = "https://randoxapi.xevensolutions.com/api/";
