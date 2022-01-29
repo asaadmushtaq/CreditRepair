@@ -23,7 +23,7 @@ export default function AboutUs() {
                         </div>
                     </div>
                 </div>
-                <div className='container' style={{ maxWidth: "880px" }}>
+                <div className='container section__padding pt-0' style={{ maxWidth: "880px" }}>
                     <div className='row mt-3 pb-5'>
                         <div className='col-12 col-md-6'>
                             <p className='text-light text-left mt-4'>Hi, I'm Credit Repair founder and CEO</p>
