@@ -4,7 +4,7 @@ import { FiLogOut } from "react-icons/fi";
 import { Link } from "react-router-dom";
 export function SignOut() {
   const Swal = require("sweetalert2");
-  const [cookies, remove] = useCookies(["randox_certifly_user"]);
+  const [cookies, remove] = useCookies(["credit_repair_user"]);
   console.log("cookies:::", cookies);
   function logout() {
     Swal.fire({
@@ -20,7 +20,7 @@ export function SignOut() {
     }).then((result) => {
       if (result.isConfirmed) {
         // history.push(PATH.LOGIN);
-        remove("randox_certifly_user", { path: "/" });
+        remove("credit_repair_user", { path: "/" });
       }
     });
   }

@@ -13,7 +13,7 @@ function PrivateRoute({ children, ...rest }) {
       {...rest}
       onUpdate={() => window.scrollTo(0, 0)}
       render={({ location }) =>
-        auth.randox_certifly_user && auth.randox_certifly_user.token ? (
+        auth.credit_repair_user && auth.credit_repair_user.token ? (
           <>
             <ParentComponentWithSideBar>
               {children}

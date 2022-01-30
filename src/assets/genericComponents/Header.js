@@ -11,7 +11,7 @@ import { useAuth } from "../../Navigation/Auth/ProvideAuth";
 import { Link, useHistory } from "react-router-dom";
 import { SignOut } from "./SignOut";
 
-export function Header(props) {
+export function Header() {
   let auth = useAuth();
   document.body.style.backgroundColor = "#f5f5f5";
   const [loading, setLoading] = useState(false);
@@ -23,7 +23,7 @@ export function Header(props) {
       <div className="header">
         {/* Logo */}
         <div className="header-left">
-          <Link to="" className="logo mr-0">
+          <Link to={PATH.ADMINDASHBOARD} className="logo mr-0">
             <img src={IMAGES.RANDOXLOGO} alt="Logo" className="img-fluid" />
           </Link>
         </div>
@@ -31,131 +31,28 @@ export function Header(props) {
           <a href="javascript:void(0)" id="toggle_btn">
             <FaBars className="toggleset" />
           </a>
-          {/* {auth.randox_certifly_user.userType === "SuperAdmin" && (
+          {auth.credit_repair_user.userType === "Admin" && (
             <>
               {
-                history.location.pathname === PATH.S_DASHBOARD ? (
-                  <h3 className="ml-4">{`Dashboard`}</h3>
+                history.location.pathname === PATH.ADMINDASHBOARD ? (
+                  <h3 className="ml-4">{`Home`}</h3>
                 ) : (
                   <></>
                 )}
               {
-                history.location.pathname === PATH.S_REPORTS ? (
-                  <h3 className="ml-4">{`Reports`}</h3>
+                history.location.pathname === PATH.ADMINCLIENTS ? (
+                  <h3 className="ml-4">{`Clients`}</h3>
                 ) : (
                   <></>
                 )}
               {
-                history.location.pathname === PATH.S_HISTORY_LOGS ? (
-                  <h3 className="ml-4">{`Admin History Logs`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_IMPORT_ORDERS ? (
-                  <h3 className="ml-4">{`Import Orders`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_HELP_SUPPORT ? (
-                  <h3 className="ml-4">{`Help Support`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_CUSTOM_URNS_SEARCH ? (
-                  <h3 className="ml-4">{`Custom Urn Search`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_VERIFIER_COUNT ? (
-                  <h3 className="ml-4">{`Varifier Count`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_REVIEW_CERTIFICATE ? (
-                  <h3 className="ml-4">{`submit for Review `}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_SUPPORT_TECH ? (
-                  <h3 className="ml-4">{`IT Support tech `}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_REVIEW_REQUEST ? (
-                  <h3 className="ml-4">{`Review Certificate`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_ADMIN_USER ? (
-                  <h3 className="ml-4">{`Admin User`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_CHANGE_PASSWORD ? (
-                  <h3 className="ml-4">{`Change Password`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_UNDO_DELETE_CERT ? (
-                  <h3 className="ml-4">{`undo delete cert`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_LOGIN_CHECK ? (
-                  <h3 className="ml-4">{`login check`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_REGISTRATION_CHECK ? (
-                  <h3 className="ml-4">{`registration check`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_USED_QR_DEVICE ? (
-                  <h3 className="ml-4">{`used qr devices`}</h3>
-                ) : (
-                  <></>
-                )}
-
-              {
-                history.location.pathname === PATH.S_DOWNLOAD_CERTIFICATE ? (
-                  <h3 className="ml-4">{`download certificate`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_BOOKING_REF_CHECK ? (
-                  <h3 className="ml-4">{`booking ref check`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_AVERAGE_APPROVAL_TIME ? (
-                  <h3 className="ml-4">{`average approval time`}</h3>
-                ) : (
-                  <></>
-                )}
-              {
-                history.location.pathname === PATH.S_USER_CERTIFICATE ? (
-                  <h3 className="ml-4">{`user certificate`}</h3>
+                history.location.pathname === PATH.ADMINLETTERLIBRARY ? (
+                  <h3 className="ml-4">{`Letter Library`}</h3>
                 ) : (
                   <></>
                 )}
             </>
-          )} */}
+          )}
         </div>
         {/* /Logo */}
         {/* Mobile Menu Toggle */}

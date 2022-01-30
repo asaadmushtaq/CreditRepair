@@ -1,0 +1,192 @@
+#login-page {
+    width: 100%;
+    min-height: 100%;
+    height: 100vh;
+    background: #eff5f7;
+}
+
+.flex {
+    display: flex;
+}
+#login-page .picture-segment {
+    min-width: 530px;
+    background: url(https://disputebee.com/img/woman.jpg);
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+}
+
+#login-page .picture-segment .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .6;
+}
+#login-page .login-segment {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.centered {
+    justify-content: center;
+}
+.center-y, .centered {
+    align-items: center;
+}
+.column {
+    flex-direction: column;
+}
+.flex {
+    display: flex;
+}
+#login-page .logo {
+    margin-bottom: 15px;
+    left: -6px;
+    position: relative;
+    width: 188px;
+    height: 50px;
+    min-height: 50px;
+}
+
+#login-page .login-box {
+    width: 100%;
+    max-width: 360px;
+    background: #fff;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+}
+#login-page .login-box .top {
+    padding: 30px;
+}
+#login-page .login-text {
+    font-size: 26px;
+    font-family: ProximaNova,Helvetica Neue,Arial,Helvetica,sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+#login-page .password-input, #login-page .username-input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.global-text-input {
+    position: relative;
+    font-size: 14px;
+    color: #333;
+}
+.global-text-input input[type=date].has-icon, .global-text-input input[type=password].has-icon, .global-text-input input[type=email].has-icon {
+    padding-left: 50px;
+}
+.global-text-input input[type=date]:not(.recurly), .global-text-input input[type=password]:not(.recurly), .global-text-input input[type=email]:not(.recurly) {
+    box-shadow: inset 0 1px 2px rgb(203 203 210 / 40%);
+}
+.global-text-input input[type=date], .global-text-input input[type=password], .global-text-input input[type=email] {
+    border: 1px solid #cbcbd2;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 8px 10px;
+    height: 40px;
+    width: 100%;
+    transition: .11s ease-in;
+}
+.global-text-input .input-icon.input-username {
+    background: url(https://disputebee.com/img/username-input.png);
+    background-size: 18px auto;
+}
+
+.global-text-input .input-icon {
+    position: absolute;
+    top: 19px;
+    margin-top: -9px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+}
+.global-text-input .input-icon:after {
+    background-image: linear-gradient(
+0deg
+,hsla(0,0%,83.1%,0) 0,#d4d4d4 30%,#d4d4d4 70%,hsla(0,0%,83.1%,0));
+    content: "";
+    position: absolute;
+    right: -11px;
+    top: -10px;
+    bottom: -10px;
+    width: 1px;
+    opacity: .5;
+    background-color: hsla(0,0%,83.1%,0);
+}
+.global-text-input .input-icon.input-password {
+    background: url(https://disputebee.com/img/password-input.png);
+    background-size: 18px auto;
+}
+.global-text-input .input-icon:after {
+    background-image: linear-gradient(
+0deg
+,hsla(0,0%,83.1%,0) 0,#d4d4d4 30%,#d4d4d4 70%,hsla(0,0%,83.1%,0));
+    content: "";
+    position: absolute;
+    right: -11px;
+    top: -10px;
+    bottom: -10px;
+    width: 1px;
+    opacity: .5;
+    background-color: hsla(0,0%,83.1%,0);
+}
+#login-page .login-button {
+    width: 100%;
+}
+.global-button.large.caps, .global-button:active.large.caps, .global-button:focus.large.caps {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.global-button.blue, .global-button:active.blue, .global-button:focus.blue {
+    color: #fff;
+    background: #2185d0;
+    border: 2px solid #2185d0;
+}
+.global-button.large, .global-button:active.large, .global-button:focus.large {
+    font-size: 18px;
+    padding: 14px 15px;
+    border-radius: 3px;
+}
+.global-button:active:not(.standard-font), .global-button:focus:not(.standard-font), .global-button:not(.standard-font) {
+    font-family: Montserrat,sans-serif;
+    font-weight: 500;
+}
+.global-button, .global-button:active, .global-button:focus {
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+    cursor: pointer;
+    outline: none;
+    transition: .11s ease-in;
+    border-style: solid;
+    border-width: 0;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login-page .login-box .bottom {
+    padding: 15px;
+    border-top: 1px solid #d7d7d7;
+}
+#login-page .login-box .bottom p {
+    line-height: 150%;
+    margin: 0;
+    font-size: 16px;
+}
+#login-page .login-box .bottom p a {
+        color: #1d77bb;
+        text-decoration: underline;
+}
+#login-page .forgot-password {
+    padding: 10px;
+    color: #000;
+}

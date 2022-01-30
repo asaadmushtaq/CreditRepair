@@ -9,9 +9,8 @@ export function ParentComponentwithoutContainer({ children, ...rest }) {
 
             <Header />
             <Sidebar />
-            <ChatButton />
             <div className="page-wrapper">
-                    {children}
+                {children}
             </div>
         </div>
     )

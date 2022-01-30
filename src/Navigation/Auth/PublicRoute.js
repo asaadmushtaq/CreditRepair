@@ -6,15 +6,15 @@ import { PATH } from "../../config";
 import { useAuth } from "./ProvideAuth";
 function PublicRoute({ children, ...rest }) {
   let auth = useAuth();
-  console.log(auth.randox_certifly_user);
+  console.log(auth.credit_repair_user);
   return (
     <Route
       {...rest}
       render={({ location }) =>
-        auth.randox_certifly_user && auth.randox_certifly_user.token ? (
+        auth.credit_repair_user && auth.credit_repair_user.token ? (
           <Redirect
             to={{
-              pathname: PATH.DASHBOARD,
+              pathname: PATH.ADMINDASHBOARD,
               state: { from: location },
             }}
           />

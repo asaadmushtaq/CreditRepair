@@ -2,8 +2,10 @@ import NoPage from "./NoPageFound";
 import React from "react";
 import { LoaderPage } from "../assets";
 import login from "./Login";
-import ProfileEdit from "./Profile/ProfileEdit";
-import ProfileShow from "./Profile/ProfileShow";
+import Signup from "./Signup";
+import AdminDashboard from "./Admin/Admin-Dashboard";
+import AdminClients from "./Admin/Admin-Clients";
+import AdminLetterLibrary from "./Admin/Admin-LetterLibrary";
 import HomePage from "./HomePage";
 
 class DynamicImport extends React.Component {
@@ -31,8 +33,10 @@ class DynamicImport extends React.Component {
 const WEB_PAGES = {
   NOPAGE: NoPage,
   LOGIN: login,
-  PROFILESHOW: ProfileShow,
-  PROFILEEDIT: ProfileEdit,
+  SIGNUP: Signup,
+  ADMINDASHBOARD: AdminDashboard,
+  ADMINCLIENTS: AdminClients,
+  ADMINLETTERLIBRARY: AdminLetterLibrary,
   HOMEPAGE: HomePage
 };
 

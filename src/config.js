@@ -4,8 +4,11 @@ const ERROR = {
 const PATH = {
   NOPAGE: "*",
   HOMEPAGE: "/",
-  PROFILEEDIT: "/profile-edit",
-  PROFILESHOW: "/profile",
+  LOGIN: "/login",
+  SIGNUP: "/signup",
+  ADMINDASHBOARD: "/admin-dashboard",
+  ADMINCLIENTS: "/admin-clients",
+  ADMINLETTERLIBRARY: "/admin-letterLibrary",
 };
 
 const baseUrl = "https://randoxapi.xevensolutions.com/api/";

@@ -9,7 +9,6 @@ export function ParentComponentWithSideBar({ children, ...rest }) {
 
             <Header />
             <Sidebar />
-            <ChatButton />
             <div className="page-wrapper">
                 <div className="container-fluid">
                     {children}

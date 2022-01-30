@@ -3,7 +3,7 @@ import React, { createContext, useContext } from 'react';
 import { useCookies } from 'react-cookie';
 const authContext = createContext();
 export function ProvideAuth({ children }) {
-  const [cookies] = useCookies(['randox_certifly_user']);
+  const [cookies] = useCookies(['credit_repair_user']);
   const user = cookies;
   return (
     <authContext.Provider value={user}>

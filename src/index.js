@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/styles/mediaquery.css";
 import "./index.css";
 import "./assets/styles/style.css";
+import "./assets/styles/muzamal.css";
 import "./assets/styles/components-style.css";
 import "./assets/js/jquery.slimscroll";
 import "./App.css";
@@ -21,7 +22,7 @@ import "react-toastify/dist/ReactToastify.css";
 // import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
 if (process.env.NODE_ENV === "production") {
-  console.log = function () {};
+  console.log = function () { };
 }
 ReactDOM.render(
   <React.StrictMode>
