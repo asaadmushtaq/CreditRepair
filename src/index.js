@@ -18,6 +18,7 @@ import "./assets/js/common.js";
 import "./loader.js";
 import ".././src/assets/styles/main.css";
 import "react-toastify/dist/ReactToastify.css";
+import "./assets/styles/asaad.css"
 // import "react-circular-progressbar/dist/styles.css";
 // import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 

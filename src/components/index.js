@@ -7,6 +7,8 @@ import AdminDashboard from "./Admin/Admin-Dashboard";
 import AdminClients from "./Admin/Admin-Clients";
 import AdminLetterLibrary from "./Admin/Admin-LetterLibrary";
 import HomePage from "./HomePage";
+import AboutUs from "./AboutUs";
+import ContactUs from "./Contact";
 
 class DynamicImport extends React.Component {
   state = {
@@ -37,7 +39,9 @@ const WEB_PAGES = {
   ADMINDASHBOARD: AdminDashboard,
   ADMINCLIENTS: AdminClients,
   ADMINLETTERLIBRARY: AdminLetterLibrary,
-  HOMEPAGE: HomePage
+  HOMEPAGE: HomePage,
+  ABOUTUS: AboutUs,
+  CONTACTUS: ContactUs
 };
 
 export { WEB_PAGES };

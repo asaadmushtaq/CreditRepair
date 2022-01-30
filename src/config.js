@@ -9,6 +9,8 @@ const PATH = {
   ADMINDASHBOARD: "/admin-dashboard",
   ADMINCLIENTS: "/admin-clients",
   ADMINLETTERLIBRARY: "/admin-letterLibrary",
+  ABOUTUS: "/about-us",
+  CONTACTUS: "/contact-us"
 };
 
 const baseUrl = "https://randoxapi.xevensolutions.com/api/";

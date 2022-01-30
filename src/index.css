@@ -16,3 +16,16 @@ code {
   font-family: 'SFProRegular';
   src: local('SFProRegular'), url("./assets/fonts/SFProDisplay-Regular.ttf") format('truetype');
 }
+
+:root {
+  --font-family: 'Poppins', sans-serif;
+
+  --gradient-text: linear-gradient(89.97deg, #d891f5 1.84%, #FF2e00 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  
+  --color-bg: rgba(1, 62, 80);
+  --color-footer : #024c62;
+  --color-blog: #042c54;
+  --color-text: #ffffff;
+  --color-subtext: #FF8A71;
+}
