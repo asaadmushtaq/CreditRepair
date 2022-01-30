@@ -8,6 +8,7 @@ const PATH = {
   SIGNUP: "/signup",
   ADMINDASHBOARD: "/admin-dashboard",
   ADMINCLIENTS: "/admin-clients",
+  CREATENEWCLIENT: "/clients/new",
   ADMINLETTERLIBRARY: "/admin-letterLibrary",
   ABOUTUS: "/about-us",
   CONTACTUS: "/contact-us"

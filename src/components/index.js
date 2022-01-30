@@ -5,6 +5,7 @@ import login from "./Login";
 import Signup from "./Signup";
 import AdminDashboard from "./Admin/Admin-Dashboard";
 import AdminClients from "./Admin/Admin-Clients";
+import CreateNewClient from "./Admin/Admin-Clients/Create-New-Client";
 import AdminLetterLibrary from "./Admin/Admin-LetterLibrary";
 import HomePage from "./HomePage";
 import AboutUs from "./AboutUs";
@@ -39,6 +40,7 @@ const WEB_PAGES = {
   ADMINDASHBOARD: AdminDashboard,
   ADMINCLIENTS: AdminClients,
   ADMINLETTERLIBRARY: AdminLetterLibrary,
+  CREATENEWCLIENT: CreateNewClient,
   HOMEPAGE: HomePage,
   ABOUTUS: AboutUs,
   CONTACTUS: ContactUs

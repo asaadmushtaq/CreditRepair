@@ -32,6 +32,9 @@ export const RouterConfig = () => {
         <PrivateRoute exact path={PATH.ADMINLETTERLIBRARY}>
           <WEB_PAGES.ADMINLETTERLIBRARY />
         </PrivateRoute>
+        <PrivateRoute exact path={PATH.CREATENEWCLIENT}>
+          <WEB_PAGES.CREATENEWCLIENT />
+        </PrivateRoute>
         <PublicRoute exact path={PATH.HOMEPAGE}>
           <WEB_PAGES.HOMEPAGE />
         </PublicRoute>

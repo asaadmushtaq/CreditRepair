@@ -22,8 +22,8 @@ const Navbar = () => {
         </div>
       </div>
       <div className="cr__navbar-sign">
-        <p>Sign in</p>
-        <button type="button">Sign up</button>
+         <Link to={PATH.LOGIN}><p>Sign in</p></Link>
+        <Link to={PATH.SIGNUP}><button type="button">Sign up</button></Link>
       </div>
       <div className="cr__navbar-menu">
         {toggleMenu
@@ -39,8 +39,8 @@ const Navbar = () => {
           <p><Link to={PATH.CONTACTUS}>Contact</Link></p>
           </div>
           <div className="cr__navbar-menu_container-links-sign">
-            <p>Sign in</p>
-            <button type="button">Sign up</button>
+            <Link to={PATH.LOGIN}><p>Sign in</p></Link>
+            <Link to={PATH.SIGNUP}><button type="button">Sign up</button></Link>
           </div>
         </div>
         )}

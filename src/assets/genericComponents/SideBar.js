@@ -11,7 +11,6 @@ import { GoPrimitiveDot } from "react-icons/go";
 import { GrHome, GrLineChart } from "react-icons/gr";
 import { CgImport } from "react-icons/cg";
 export default function Sidebar() {
-  // const [cookies, remove] = useCookies(['alfa_care_user']);
   let history = useHistory();
   let auth = useAuth();
   const Swal = require("sweetalert2");

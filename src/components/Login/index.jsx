@@ -5,9 +5,10 @@ import { useCookies } from "react-cookie";
 import { PATH } from "../../config";
 import { Link, useHistory } from "react-router-dom";
 import { Form } from "react-bootstrap";
-import { FieldError } from "../../assets/genericComponents/ErrorMessage";
 import { Loader } from "../../assets/genericComponents/Loader";
-
+import { FaEnvelope, FaLock } from "react-icons/fa"
+import { IMAGES } from "../../assets";
+import { BsArrowRight } from "react-icons/bs";
 export default function Login() {
   let history = useHistory();
   const { register, handleSubmit, errors } = useForm();
@@ -22,7 +23,7 @@ export default function Login() {
     if (data.email === "admin@gmail.com") {
       data = { ...data, token: "token", businessSetup: false, locations: 0 };
       setCookies("credit_repair_user", data);
-      history.push(PATH.DASHBOARD);
+      history.push(PATH.ADMINDASHBOARD);
     }
     else {
       toast.error("Invalid Email or Password", {
@@ -39,81 +40,103 @@ export default function Login() {
   return (
     <React.Fragment>
       <ToastContainer />
-      <div id="login-page" className="flex">
-        <div className="picture-segment">
-          <div className="overlay" />
-        </div>
-        <div className="login-segment flex centered column">
-          <div className="logo" style={{ position: 'relative', width: 188, height: 50, minHeight: 50 }}>
-            <img src="https://disputebee.com/img/bee-dark-50x50.png" srcSet="https://disputebee.com/img/bee-dark-50x50.png 1x, https://disputebee.com/img/bee-dark-50x50.png 2x" alt="DisputeBee Logo" style={{ position: 'absolute', width: 50, height: 50, top: 0, left: 0, opacity: 0, transition: 'all 0.11s ease-in 0s' }} />
-            <img src="https://disputebee.com/img/bee-light-50x50.png" srcSet="https://disputebee.com/img/bee-light-50x50.png 1x, https://disputebee.com/img/bee-dark-50x50.png 2x" alt="DisputeBee Logo" style={{ position: 'absolute', width: 50, height: 50, top: 0, left: 0, opacity: 1, transition: 'all 0.11s ease-in 0s' }} />
-            <img src="https://disputebee.com/img/disputebee-light-135x29.png" srcSet="https://disputebee.com/img/disputebee-light-135x29.png 1x, https://disputebee.com/img/disputebee-light-135x29.png 2x" alt="DisputeBee Logo" style={{ position: 'absolute', width: 135, top: 11, left: 53, opacity: 0, transition: 'all 0.11s ease-in 0s' }} />
-            <img src="https://disputebee.com/img/disputebee-dark-135x29.png" srcSet="https://disputebee.com/img/disputebee-dark-135x29.png 1x, https://disputebee.com/img/disputebee-dark-135x29.png 2x" alt="DisputeBee Logo" style={{ position: 'absolute', width: 135, top: 11, left: 53, opacity: 1, transition: 'all 0.11s ease-in 0s' }} /></div>
-          <Form onSubmit={handleSubmit(onSubmit)}>
-            {email === "admin@gmail.com" &&
-              <Form.Control
-                ref={register({})}
-                name="userType"
-                value="Admin"
-                type="hidden"
-              />
-            }
-            <div className="login-box flex column">
-              <div className="top">
-                <h3 className="login-text">Log in to your account</h3>
-                <div className="global-text-input username-input">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email address"
-                    className="has-icon"
-                    aria-label="Email Address"
-                    value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
-                    style={{
-                      borderColor: errors && errors.email ? "#a80000" : "",
-                    }}
-                    ref={register({ required: true })}
-                  />
-                  <div className="input-icon input-username" />
-                  {errors.email && (
-                    <FieldError message={"This Field is Required"} />
-                  )}
+      <div className="limiter">
 
-                </div>
-                <div className="global-text-input password-input">
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    className="has-icon"
-                    aria-label="Password"
-                    value={password}
-                    onChange={(e) => {
-                      setPassword(e.target.value);
-                    }}
-                    style={{
-                      borderColor: errors && errors.password ? "#a80000" : "",
-                    }}
-                    ref={register({ required: true })}
-                  />
-                  <div className="input-icon input-password" />
-                  {errors.password && (
-                    <FieldError message={"This Field is Required"} />
-                  )}
-                </div>
-                  <button type="submit" className="global-button  blue large caps login-button hoverable">LOG IN</button>
-              </div>
-              <div className="bottom">
-                <p>New to DisputeBee?&nbsp;<Link to={PATH.SIGNUP}>Sign Up</Link></p>
-              </div>
+        <div className="container-login100">
+
+          <div className="wrap-login100">
+
+            <div className="login100-pic js-tilt" data-tilt>
+              <img src={IMAGES.LOGINLOGO} alt="IMG" />
             </div>
-          </Form>
-          <div className="forgot-password">Forgot your password? <a href="/forgot-password">Reset it.</a></div>
+            <Form onSubmit={handleSubmit(onSubmit)} className="login100-form validate-form">
+              {email === "admin@gmail.com" ? (
+                <Form.Control
+                  ref={register({})}
+                  name="userType"
+                  value="Admin"
+                  type="hidden"
+                />
+              ) : (
+                <Form.Control
+                  ref={register({})}
+                  name="userType"
+                  value="Admin"
+                  type="hidden"
+                />
+              )}
+              <div className="cr__navbar-links_logo mr-0 text-center mb-5">
+                <img src={IMAGES.CREDITREPAIRGREEN} className="img-fluid" alt="" />
+              </div>
+              <span className="login100-form-title pb-3">
+                Member Login
+              </span>
+              <div className="wrap-input100 validate-input">
+                <input
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  placeholder="Email address"
+                  className="input100"
+                  style={{
+                    borderColor: errors && errors.email ? "#a80000" : "",
+                  }}
+                  ref={register({ required: true })}
+                />
+
+                <span className="focus-input100" />
+                <span className="symbol-input100">
+                  <FaEnvelope />
+                </span>
+              </div>
+              <div className="wrap-input100 validate-input">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  className="input100"
+                  style={{
+                    borderColor: errors && errors.password ? "#a80000" : "",
+                  }}
+                  ref={register({ required: true })}
+                />
+
+                <span className="focus-input100" />
+                <span className="symbol-input100">
+                  <FaLock />
+                </span>
+              </div>
+              <div className="container-login100-form-btn">
+                <button type="submit" className="login100-form-btn">
+                  Login
+                </button>
+              </div>
+              <div className="text-center p-t-12">
+                <span className="txt1">
+                  Forgot
+                </span>
+                <a className="txt2" href="#">
+                  Username / Password?
+                </a>
+              </div>
+              <div className="text-center p-t-136">
+                <Link to={PATH.SIGNUP} className="txt2">
+                  Create your Account
+                  <BsArrowRight className="m-l-5" />
+                </Link>
+              </div>
+            </Form>
+          </div>
         </div>
       </div>
+
     </React.Fragment>
   );
 }

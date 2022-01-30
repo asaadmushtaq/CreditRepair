@@ -1,7 +1,34 @@
-@media screen and (max-width: 768px) {
-}
-@media only screen and (max-width: 1060px){
-#login-page .picture-segment {
-    display: none;
-}
-}
+
+@media (max-width: 992px) {
+    .wrap-login100 {
+      padding: 177px 90px 33px 85px !important;
+    }
+  
+    .login100-pic {
+      width: 35%;
+    }
+  
+    .login100-form {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .wrap-login100 {
+      padding: 100px 80px 33px 80px !important;
+    }
+  
+    .login100-pic {
+      display: none !important;
+    }
+  
+    .login100-form {
+      width: 100% !important;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .wrap-login100 {
+      padding: 100px 15px 33px 15px !important;
+    }
+  }
