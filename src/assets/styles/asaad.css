@@ -42,7 +42,7 @@ a {
 }
 
 .section__margin {
-    margin: 8rem 6rem;
+    margin: 0rem 6rem 0rem 6rem;
 }
 
 .scale-up-center {
@@ -255,7 +255,7 @@ a {
 
 .cr__header-content h1 {
     font-family: var(--font-family);
-    font-weight: 800;
+    font-weight: 500;
     font-size: 62px;
     line-height: 75px;
     letter-spacing: -0.04em;
@@ -413,7 +413,7 @@ a {
 
 /* Footer */
 
-.gpt3__footer {
+.cr__footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -422,21 +422,21 @@ a {
     background: var(--color-footer);
 }
 
-.gpt3__footer-heading {
+.cr__footer-heading {
     width: 100%;
     text-align: center;
 
     margin-bottom: 3rem;
 }
 
-.gpt3__footer-heading h1 {
+.cr__footer-heading h1 {
     font-family: var(--font-family);
-    font-weight: 800;
+    font-weight: 500;
     font-size: 64px;
     line-height: 75px;
 }
 
-.gpt3__footer-btn {
+.cr__footer-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -449,7 +449,7 @@ a {
     cursor: pointer;
 }
 
-.gpt3__footer-btn p {
+.cr__footer-btn p {
     font-size: 18px;
     font-family: var(--font-family);
     line-height: 21px;
@@ -457,7 +457,7 @@ a {
     word-spacing: 2px;
 }
 
-.gpt3__footer-links {
+.cr__footer-links {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -468,37 +468,37 @@ a {
     text-align: left;
 }
 
-.gpt3__footer-links div {
+.cr__footer-links div {
     width: 250px;
     margin: 1rem;
 }
 
-.gpt3__footer-links_logo {
+.cr__footer-links_logo {
     display: flex;
     flex-direction: column;
 }
 
-.gpt3__footer-links_logo img {
+.cr__footer-links_logo img {
     width: 118px;
     height: 30px;
 
     margin-bottom: 1rem;
 }
 
-.gpt3__footer-links_logo p {
+.cr__footer-links_logo p {
     font-family: var(--font-family);
     font-size: 12px;
     line-height: 15px;
     color: #fff;
 }
 
-.gpt3__footer-links_div {
+.cr__footer-links_div {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
 }
 
-.gpt3__footer-links_div h4 {
+.cr__footer-links_div h4 {
     font-size: 14px;
     line-height: 17px;
     font-family: var(--font-family);
@@ -507,7 +507,7 @@ a {
     margin-bottom: 0.9rem;
 }
 
-.gpt3__footer-links_div p {
+.cr__footer-links_div p {
     font-size: 12px;
     line-height: 15px;
     font-family: var(--font-family);
@@ -517,13 +517,13 @@ a {
     cursor: pointer;
 }
 
-.gpt3__footer-copyright {
+.cr__footer-copyright {
     margin-top: 2rem;
     text-align: center;
     width: 100%;
 }
 
-.gpt3__footer-copyright p {
+.cr__footer-copyright p {
     font-size: 12px;
     font-family: var(--font-family);
     line-height: 15px;
@@ -531,32 +531,264 @@ a {
 }
 
 @media screen and (max-width: 850px) {
-    .gpt3__footer-heading h1 {
+    .cr__footer-heading h1 {
         font-size: 44px;
         line-height: 50px;
     }
 }
 
 @media screen and (max-width: 550px) {
-    .gpt3__footer-heading h1 {
+    .cr__footer-heading h1 {
         font-size: 34px;
         line-height: 42px;
     }
 
-    .gpt3__footer-links div {
+    .cr__footer-links div {
         margin: 1rem 0;
     }
 
-    .gpt3__footer-btn p {
+    .cr__footer-btn p {
         font-size: 14px;
         line-height: 20px;
     }
 }
 
 @media screen and (max-width: 400px) {
-    .gpt3__footer-heading h1 {
+    .cr__footer-heading h1 {
         font-size: 27px;
         line-height: 38px;
     }
 }
 
+/* what is Credit Repair */
+
+.cr__whatcr {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: var(--color-footer) !important;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.cr__whatcr-feature {
+    display: flex;
+}
+
+/* Customizing feature component as per needs */
+.cr__whatcr-feature .cr__features-container__feature {
+    margin: 0;
+}
+
+/* Customizing feature component as per needs */
+.cr__whatcr-feature .cr__features-container_feature-text {
+    max-width: 700px;
+}
+
+.cr__whatcr-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 4rem 0 2rem;
+}
+
+.cr__whatcr-heading h1 {
+    font-size: 34px;
+    line-height: 45px;
+    font-weight: 500;
+    font-family: var(--font-family);
+    max-width: 510px;
+}
+
+.cr__whatcr-heading p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--color-subtext);
+    cursor: pointer;
+}
+
+.cr__whatcr-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin-top: 2rem;
+}
+
+/* Customizing feature component as per needs */
+.cr__whatcr-container .cr__features-container__feature {
+    flex: 1;
+    margin: 1rem;
+    min-width: 210px;
+    display: unset;
+    flex-direction: column;
+}
+
+/* Customizing feature component as per needs */
+.cr__whatcr-container .cr__features-container_feature-text {
+    margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 850px) {
+    .cr__whatcr-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0rem;
+    }
+
+    .cr__whatcr-heading p {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /* Customizing feature component as per needs */
+    .cr__whatcr-feature .cr__features-container__feature {
+        flex-direction: column;
+    }
+
+    /* Customizing feature component as per needs */
+    .cr__whatcr-feature .cr__features-container_feature-text {
+        margin-top: 0.5rem;
+    }
+
+    .cr__whatcr-heading h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    /* Customizing feature component as per needs */
+    .cr__whatcr-container .cr__features-container__feature {
+        margin: 1rem 0;
+        min-width: 100%;
+    }
+}
+.cr__features-container__feature {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+
+    margin: 1rem;
+}
+
+.cr__features-container__feature-title {
+    flex: 1;
+    max-width: 190px;
+    margin-right: 2rem;
+}
+
+.cr__features-container__feature-title h1 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #fff;
+}
+
+.cr__features-container__feature-title div {
+    width: 38px;
+    height: 3px;
+    background: var(--gradient-bar);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 0.25rem;
+}
+
+.cr__features-container_feature-text {
+    flex: 2;
+    max-width: 390px;
+    display: flex;
+}
+
+.cr__features-container_feature-text p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-text);
+}
+
+@media screen and (max-width: 550px) {
+    .cr__features-container__feature-title h1 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .cr__features-container_feature-text p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .cr__features-container__feature {
+        margin: 1rem 0;
+    }
+}
+
+/* Features Section */
+
+.cr__features {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.cr__features-heading {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    text-align: left;
+    margin-right: 5rem;
+}
+
+.cr__features-heading h1 {
+    font-size: 34px;
+    line-height: 45px;
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+
+.cr__features-heading p {
+    color: var(--color-subtext);
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: var(--font-family);
+
+    margin-top: 2rem;
+}
+
+.cr__features-container {
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 990px) {
+    .cr__features {
+        flex-direction: column;
+    }
+
+    .cr__features-heading {
+        margin: 0 0 2rem 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .cr__features-heading h1 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}

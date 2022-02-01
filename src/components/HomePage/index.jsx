@@ -1,8 +1,10 @@
 import React from 'react';
 import { IMAGES } from '../../assets';
+import FeaturesSection from './FeaturesSection';
 // import Footer from './Footer';
 import Header from './Header';
 import Navbar from './Navbar';
+import WhatIsCR from './WhatIsCR';
 
 const Homepage = () => {
   return (
@@ -10,27 +12,29 @@ const Homepage = () => {
       <div className="gradient__bg">
         <Navbar />
         <Header />
-
-        <div className="gpt3__footer section__padding">
-          <div className="gpt3__footer-links">
-            <div className="gpt3__footer-links_logo">
-              <img src={IMAGES.CREDITREPAIR} alt="gpt3_logo" />
+        <WhatIsCR />
+        <FeaturesSection />
+        {/* Footer Start */}
+        <div className="cr__footer section__padding">
+          <div className="cr__footer-links">
+            <div className="cr__footer-links_logo">
+              <img src={IMAGES.CREDITREPAIR} alt="credit repair" />
               <p>Crechterwoord K12 182 DK Alknjkcb, <br /> All Rights Reserved</p>
             </div>
-            <div className="gpt3__footer-links_div">
+            <div className="cr__footer-links_div">
               <h4>Links</h4>
               <p>Overons</p>
               <p>Social Media</p>
               <p>Counters</p>
               <p>Contact</p>
             </div>
-            <div className="gpt3__footer-links_div">
+            <div className="cr__footer-links_div">
               <h4>Company</h4>
               <p>Terms & Conditions </p>
               <p>Privacy Policy</p>
               <p>Contact</p>
             </div>
-            <div className="gpt3__footer-links_div">
+            <div className="cr__footer-links_div">
               <h4>Get in touch</h4>
               <p>Crechterwoord K12 182 DK Alknjkcb</p>
               <p>085-132567</p>
@@ -38,10 +42,12 @@ const Homepage = () => {
             </div>
           </div>
 
-          <div className="gpt3__footer-copyright">
+          <div className="cr__footer-copyright">
             <p>@2022 All rights reserved.</p>
           </div>
         </div>
+        {/* Footer End */}
+
       </div>
     </div>
   );
