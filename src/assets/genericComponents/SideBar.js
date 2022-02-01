@@ -40,7 +40,7 @@ export default function Sidebar() {
           <ul>
             {auth.credit_repair_user.userType === "Admin" && (
               <>
-                <li
+                {/* <li
                   className={
                     history.location.pathname === PATH.ADMINDASHBOARD ? "active" : ""
                   }
@@ -54,7 +54,7 @@ export default function Sidebar() {
                     <GrHome></GrHome>
                     <span>Home</span>
                   </Link>
-                </li>
+                </li> */}
                 <li
                   className={
                     history.location.pathname === PATH.ADMINCLIENTS ? "active" : ""
