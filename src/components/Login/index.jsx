@@ -5,7 +5,6 @@ import { useCookies } from "react-cookie";
 import { PATH } from "../../config";
 import { Link, useHistory } from "react-router-dom";
 import { Form } from "react-bootstrap";
-import { Loader } from "../../assets/genericComponents/Loader";
 import { FaEnvelope, FaLock } from "react-icons/fa"
 import { IMAGES } from "../../assets";
 import { BsArrowRight } from "react-icons/bs";

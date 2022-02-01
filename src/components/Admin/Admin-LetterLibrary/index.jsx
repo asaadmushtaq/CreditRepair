@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 export default function AdminLetterLibrary() {
   return (
     <React.Fragment>
-      asdsdas
+      Admin Letter
     </React.Fragment>
   );
 }
