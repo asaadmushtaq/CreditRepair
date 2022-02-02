@@ -3,7 +3,7 @@ import React from 'react';
 const WhatIsCR = () => (
     <div className="cr__whatcr section__margin">
         <div className="cr__whatcr-feature">
-            <Feature title="What is Credit Repair" text="Credit Money is the only One-Click “Done-For-You,” Credit Repair that not only extracts all derogatories automatically but, at the same time, assigns the letters and the dispute reasons. Unbelievable! This benefit, and countless more, can’t be emphasized enough." />
+            <Feature title="What is Credit Repair" text="Credit Repair is the only One-Click “Done-For-You,” Credit Repair that not only extracts all derogatories automatically but, at the same time, assigns the letters and the dispute reasons. Unbelievable! This benefit, and countless more, can’t be emphasized enough." />
         </div>
         <div className="cr__whatcr-heading">
             <h1 className="gradient__text">The possibilities are beyond your imagination</h1>

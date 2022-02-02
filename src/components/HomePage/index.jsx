@@ -1,9 +1,10 @@
 import React from 'react';
 import { IMAGES } from '../../assets';
+import BlogSection from './Blog';
 import FeaturesSection from './FeaturesSection';
-// import Footer from './Footer';
 import Header from './Header';
 import Navbar from './Navbar';
+import RegisterSection from './RegisterSection';
 import WhatIsCR from './WhatIsCR';
 
 const Homepage = () => {
@@ -14,6 +15,8 @@ const Homepage = () => {
         <Header />
         <WhatIsCR />
         <FeaturesSection />
+        <BlogSection />
+        <RegisterSection />
         {/* Footer Start */}
         <div className="cr__footer section__padding">
           <div className="cr__footer-links">
