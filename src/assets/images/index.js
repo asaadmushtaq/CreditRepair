@@ -7,6 +7,12 @@ import CreditRepair from "./default-monochrome-white.svg"
 import CreditRepairGreen from "./logo-creditrepair-green.png"
 import loginLogo from "./img-01.png"
 import BlogImage from "./blogImage.png"
+import BarChart from "./barChart.jpg"
+import CarBattery from "./carBattery.jpg"
+import RepairMan from "./repairMan.jpg"
+import Briefcase from "./briefcase.jpg"
+import Envelope from "./envelope.jpg"
+
 export const IMAGES = {
   COVID: covid,
   QRCODE: qrcode,
@@ -16,5 +22,10 @@ export const IMAGES = {
   CREDITREPAIRGREEN: CreditRepairGreen,
   AVATAR: ProfileAvatar,
   LOGINLOGO: loginLogo,
-  BLOG_IMAGE: BlogImage
+  BLOG_IMAGE: BlogImage,
+  BAR_CHART: BarChart,
+  CAR_BATTERY: CarBattery,
+  REPAIR_MAN: RepairMan,
+  BRIEFCASE: Briefcase,
+  ENVELOPE: Envelope
 };
