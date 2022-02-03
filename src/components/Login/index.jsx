@@ -22,7 +22,7 @@ export default function Login() {
     if (data.email === "admin@gmail.com") {
       data = { ...data, token: "token", businessSetup: false, locations: 0 };
       setCookies("credit_repair_user", data);
-      history.push(PATH.ADMINDASHBOARD);
+      history.push(PATH.ADMINCLIENTS);
     }
     else {
       toast.error("Invalid Email or Password", {

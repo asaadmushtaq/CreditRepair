@@ -1,13 +1,16 @@
 /* eslint-disable */
 import React, { useState } from "react";
 import { IMAGES } from "../../assets/images";
-import Dropdown from "react-bootstrap/Dropdown";
 import { Loader } from "../../assets";
 import { PATH } from "../../config";
-import { FaBars, FaUser } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { useAuth } from "../../Navigation/Auth/ProvideAuth";
 import { Link, useHistory } from "react-router-dom";
 import { SignOut } from "./SignOut";
+import { Menu, Dropdown } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+import { AiOutlineCreditCard, AiOutlineSetting, AiOutlineUser } from "react-icons/ai";
+import { BiHelpCircle } from "react-icons/bi";
 
 export function Header() {
   let auth = useAuth();
@@ -20,7 +23,7 @@ export function Header() {
       <div className="header">
         {/* Logo */}
         <div className="header-left">
-          <Link to={PATH.ADMINDASHBOARD} className="logo mr-0">
+          <Link to={PATH.ADMINCLIENTS} className="logo mr-0">
             <img src={IMAGES.CREDITREPAIR} alt="Logo" className="img-fluid" />
           </Link>
         </div>
@@ -37,7 +40,8 @@ export function Header() {
                   <></>
                 )}
               {
-                history.location.pathname === PATH.ADMINCLIENTS ? (
+                history.location.pathname === PATH.ADMINCLIENTS ||
+                  history.location.pathname === PATH.CREATENEWCLIENT ? (
                   <h3 className="ml-4">{`Clients`}</h3>
                 ) : (
                   <></>
@@ -59,7 +63,14 @@ export function Header() {
         {/* /Mobile Menu Toggle */}
         <ul className="nav user-menu">
           <li className="nav-item dropdown has-arrow">
-            <Dropdown className="user-dropdown d-flex align-items-center h-100">
+            <div className="d-inline-flex align-items-center h-100">
+              <Dropdown overlay={menu} trigger={['click']} className="user-dropdown">
+                <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                  <AiOutlineUser />  My Account <DownOutlined className="ml-1" />
+                </a>
+              </Dropdown>
+            </div>
+            {/* <Dropdown className="user-dropdown d-flex align-items-center h-100">
               <Dropdown.Toggle
                 variant="success"
                 id="dropdown-basic"
@@ -93,10 +104,26 @@ export function Header() {
                   <SignOut />
                 </Dropdown.Item>
               </Dropdown.Menu>
-            </Dropdown>
+            </Dropdown> */}
           </li>
         </ul>
       </div>
     </>
   );
 }
+const menu = (
+  <Menu>
+    <Menu.Item key="0">
+      <a href="#"><AiOutlineSetting className="mr-3" />Settings</a>
+    </Menu.Item>
+    <Menu.Item key="1">
+      <a href="#"><AiOutlineCreditCard className="mr-3" />Billing</a>
+    </Menu.Item>
+    <Menu.Item key="1">
+      <a href="#"><BiHelpCircle className="mr-3" />Help</a>
+    </Menu.Item>
+    <Menu.Item key="1">
+      <SignOut />
+    </Menu.Item>
+  </Menu>
+);

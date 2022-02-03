@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import { CookiesProvider } from "react-cookie";
+import 'antd/dist/antd.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/styles/mediaquery.css";
 import "./index.css";

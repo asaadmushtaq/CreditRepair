@@ -1,15 +1,11 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { PATH } from "../../config";
-import { FaFileContract, FaHistory } from "react-icons/fa";
+import { FaUserFriends } from "react-icons/fa";
 import { useAuth } from "../../Navigation/Auth/ProvideAuth";
 import { useCookies } from "react-cookie";
-import { BsFillPersonCheckFill } from "react-icons/bs";
-import { FiLogOut, FiUsers } from "react-icons/fi";
-import { IoMdSearch } from "react-icons/io";
-import { GoPrimitiveDot } from "react-icons/go";
-import { GrHome, GrLineChart } from "react-icons/gr";
-import { CgImport } from "react-icons/cg";
+import { FiLogOut } from "react-icons/fi";
+import { GoFile } from "react-icons/go";
 export default function Sidebar() {
   let history = useHistory();
   let auth = useAuth();
@@ -57,7 +53,8 @@ export default function Sidebar() {
                 </li> */}
                 <li
                   className={
-                    history.location.pathname === PATH.ADMINCLIENTS ? "active" : ""
+                    history.location.pathname === PATH.ADMINCLIENTS ||
+                      history.location.pathname === PATH.CREATENEWCLIENT ? "active" : ""
                   }
                 >
                   <Link
@@ -66,7 +63,7 @@ export default function Sidebar() {
                     }}
                   >
                     {" "}
-                    <GrHome></GrHome>
+                    <FaUserFriends></FaUserFriends>
                     <span>Clients</span>
                   </Link>
                 </li>
@@ -81,7 +78,7 @@ export default function Sidebar() {
                     }}
                   >
                     {" "}
-                    <GrHome></GrHome>
+                    <GoFile></GoFile>
                     <span>Letter Library</span>
                   </Link>
                 </li>
