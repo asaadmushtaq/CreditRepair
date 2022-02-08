@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Dropdown } from 'react-bootstrap';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { IMAGES } from '../../../assets';
@@ -15,34 +16,52 @@ const Navbar = () => {
         </div>
         <div className="cr__navbar-links_container">
           <p><Link to={PATH.HOMEPAGE}>Home</Link></p>
-          <p><Link to={PATH.HOMEPAGE}>Explore</Link></p>
-          <p><Link to={PATH.HOMEPAGE}>Pricing</Link></p>
-          <p><Link to={PATH.ABOUTUS}>About</Link></p>
-          <p><Link to={PATH.CONTACTUS}>Contact</Link></p>
+          <p>
+            <Dropdown>
+              <Dropdown.Toggle className='about-us-btn-class' id="dropdown-basic">
+                About Us
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href={PATH.COMPANYPROFILES}>{"Company Profiles"}</Dropdown.Item>
+                <Dropdown.Item href={PATH.HOWITWORKS}>{"How it Works"}</Dropdown.Item>
+                <Dropdown.Item href={PATH.VIDEOGALLERY}>{"Video Gallery"}</Dropdown.Item>
+                <Dropdown.Item href={PATH.CLIENTTESTIMONIALS}>{"Client Testimonials"}</Dropdown.Item>
+                <Dropdown.Item href={PATH.TERMSANDCONDITIONS}>{"Terms & Conditions"}</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </p>
+          <p><Link to={PATH.SERVICES}>Services</Link></p>
+          <p><Link to={PATH.CREDIT}>Credit</Link></p>
+          <p><Link to={PATH.BLOGHOMEPAGE}>Blog</Link></p>
         </div>
       </div>
       <div className="cr__navbar-sign">
-         <Link to={PATH.LOGIN}><p>Sign in</p></Link>
-        <Link to={PATH.SIGNUP}><button type="button">Sign up</button></Link>
+        <Link to={PATH.CONTACTUS}><button type="button">Contact Us</button></Link>
       </div>
       <div className="cr__navbar-menu">
         {toggleMenu
           ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
           : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
         {toggleMenu && (
-        <div className="cr__navbar-menu_container scale-up-center">
-          <div className="cr__navbar-menu_container-links">
-          <p><Link to={PATH.HOMEPAGE}>Home</Link></p>
-          <p><Link to={PATH.HOMEPAGE}>Explore</Link></p>
-          <p><Link to={PATH.HOMEPAGE}>Pricing</Link></p>
-          <p><Link to={PATH.ABOUTUS}>About</Link></p>
-          <p><Link to={PATH.CONTACTUS}>Contact</Link></p>
+          <div className="cr__navbar-menu_container scale-up-center">
+            <div className="cr__navbar-menu_container-links">
+              <p><Link to={PATH.HOMEPAGE}>Home</Link></p>
+              <p><Link to="#">About Us</Link></p>
+              <div>
+                <small className='small-screen-links-class'><Link to={PATH.COMPANYPROFILES}>Company Profiles</Link></small>
+                <small className='small-screen-links-class'><Link to={PATH.HOWITWORKS}>How it Works</Link></small>
+                <small className='small-screen-links-class'><Link to={PATH.VIDEOGALLERY}>Video Gallery</Link></small>
+                <small className='small-screen-links-class'><Link to={PATH.CLIENTTESTIMONIALS}>Client Testimonials</Link></small>
+                <small className='small-screen-links-class'><Link to={PATH.TERMSANDCONDITIONS}>Terms & Conditions</Link></small>
+              </div>
+              <p><Link to={PATH.SERVICES}>Services</Link></p>
+              <p><Link to={PATH.CREDIT}>Credit</Link></p>
+              <p><Link to={PATH.BLOGHOMEPAGE}>Blog</Link></p>
+            </div>
+            <div className="cr__navbar-menu_container-links-sign">
+              <Link to={PATH.CONTACTUS}><button type="button">Contact Us</button></Link>
+            </div>
           </div>
-          <div className="cr__navbar-menu_container-links-sign">
-            <Link to={PATH.LOGIN}><p>Sign in</p></Link>
-            <Link to={PATH.SIGNUP}><button type="button">Sign up</button></Link>
-          </div>
-        </div>
         )}
       </div>
     </div>

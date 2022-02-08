@@ -33,7 +33,7 @@ export default function AdminClients() {
                 <h5>You have no clients!</h5>
                 <p>Click here to create your first client.</p>
               </div>
-              <div className="import-clients-link"><a>Or, click here to import existing clients</a></div>
+              <div className="import-clients-link"><a href="/#">Or, click here to import existing clients</a></div>
             </div>
           </div>
         </div>

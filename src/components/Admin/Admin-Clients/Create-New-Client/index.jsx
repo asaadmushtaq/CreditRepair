@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Form, Row, Col, Dropdown } from "react-bootstrap";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { allMonthList } from "./../../../../config";
 export default function CreateNewClient() {
   const { register, handleSubmit } = useForm();
   function onSubmit() {

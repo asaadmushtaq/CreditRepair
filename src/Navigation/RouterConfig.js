@@ -44,6 +44,30 @@ export const RouterConfig = () => {
         <PublicRoute exact path={PATH.CONTACTUS}>
           <WEB_PAGES.CONTACTUS />
         </PublicRoute>
+        <PublicRoute exact path={PATH.COMPANYPROFILES}>
+          <WEB_PAGES.COMPANYPROFILES />
+        </PublicRoute>
+        <PublicRoute exact path={PATH.HOWITWORKS}>
+          <WEB_PAGES.HOWITWORKS />
+        </PublicRoute>
+        <PublicRoute exact path={PATH.VIDEOGALLERY}>
+          <WEB_PAGES.VIDEOGALLERY />
+        </PublicRoute>
+        <PublicRoute exact path={PATH.CLIENTTESTIMONIALS}>
+          <WEB_PAGES.CLIENTTESTIMONIALS />
+        </PublicRoute>
+        <PublicRoute exact path={PATH.TERMSANDCONDITIONS}>
+          <WEB_PAGES.TERMSANDCONDITIONS />
+        </PublicRoute>
+        <PublicRoute exact path={PATH.SERVICES}>
+          <WEB_PAGES.SERVICES />
+        </PublicRoute>
+        <PublicRoute exact path={PATH.CREDIT}>
+          <WEB_PAGES.CREDIT />
+        </PublicRoute>
+        <PublicRoute exact path={PATH.BLOGHOMEPAGE}>
+          <WEB_PAGES.BLOGHOMEPAGE />
+        </PublicRoute>
         <Route path={PATH.NOPAGE} component={WEB_PAGES.NOPAGE} />
       </Switch>
     </div>

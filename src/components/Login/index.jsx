@@ -121,7 +121,7 @@ export default function Login() {
                 <span className="txt1">
                   Forgot
                 </span>
-                <a className="txt2" href="#">
+                <a className="txt2" href="/#">
                   Username / Password?
                 </a>
               </div>

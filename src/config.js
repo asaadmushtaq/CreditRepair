@@ -11,7 +11,15 @@ const PATH = {
   CREATENEWCLIENT: "/clients/new",
   ADMINLETTERLIBRARY: "/admin-letterLibrary",
   ABOUTUS: "/about-us",
-  CONTACTUS: "/contact-us"
+  CONTACTUS: "/contact-us",
+  COMPANYPROFILES: "/company-profiles",
+  HOWITWORKS: "/how-it-works",
+  VIDEOGALLERY: "/video-gallery",
+  CLIENTTESTIMONIALS: "/client-testimonials",
+  TERMSANDCONDITIONS: "/terms-and-conditions",
+  SERVICES: "/services",
+  CREDIT: "/credit",
+  BLOGHOMEPAGE: "/blog-homepage",
 };
 
 const baseUrl = "https://randoxapi.xevensolutions.com/api/";

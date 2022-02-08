@@ -1,15 +1,10 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { PATH } from "../../config";
-import { FaFileContract, FaHistory } from "react-icons/fa";
 import { useAuth } from "../../Navigation/Auth/ProvideAuth";
 import { useCookies } from "react-cookie";
-import { BsFillPersonCheckFill } from "react-icons/bs";
-import { FiLogOut, FiUsers } from "react-icons/fi";
-import { IoMdSearch } from "react-icons/io";
-import { GoPrimitiveDot } from "react-icons/go";
-import { GrHome, GrLineChart } from "react-icons/gr";
-import { CgImport } from "react-icons/cg";
+import { FiLogOut } from "react-icons/fi";
+import { GrHome } from "react-icons/gr";
 export default function Sidebar() {
   let history = useHistory();
   let auth = useAuth();

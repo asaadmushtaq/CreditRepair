@@ -1,6 +1,4 @@
 import NoPage from "./NoPageFound";
-import React from "react";
-import { LoaderPage } from "../assets";
 import login from "./Login";
 import Signup from "./Signup";
 import AdminDashboard from "./Admin/Admin-Dashboard";
@@ -10,22 +8,30 @@ import AdminLetterLibrary from "./Admin/Admin-LetterLibrary";
 import HomePage from "./HomePage";
 import AboutUs from "./AboutUs";
 import ContactUs from "./Contact";
+import CompanyProfiles from "./AboutUs/CompanyProfiles";
+import HowItWorks from "./AboutUs/HowItWorks";
+import VideoGallery from "./AboutUs/VideoGallery";
+import ClientTestimonials from "./AboutUs/ClientTestimonials";
+import TermsAndConditions from "./AboutUs/Terms&Conditions";
+import Services from "./Services";
+import Credit from "./Credit";
+import BlogHomepage from "./BlogHomepage";
 
-class DynamicImport extends React.Component {
-  state = {
-    component: null,
-  };
-  componentDidMount() {
-    this.props.load().then((component) => {
-      this.setState(() => ({
-        component: component.default ? component.default : component,
-      }));
-    });
-  }
-  render() {
-    return this.props.children(this.state.component);
-  }
-}
+// class DynamicImport extends React.Component {
+//   state = {
+//     component: null,
+//   };
+//   componentDidMount() {
+//     this.props.load().then((component) => {
+//       this.setState(() => ({
+//         component: component.default ? component.default : component,
+//       }));
+//     });
+//   }
+//   render() {
+//     return this.props.children(this.state.component);
+//   }
+// }
 // const Dashboard = (props) => (
 //   <DynamicImport load={() => import("./Dashboard")}>
 //     {(Component) =>
@@ -43,7 +49,15 @@ const WEB_PAGES = {
   CREATENEWCLIENT: CreateNewClient,
   HOMEPAGE: HomePage,
   ABOUTUS: AboutUs,
-  CONTACTUS: ContactUs
+  CONTACTUS: ContactUs,
+  COMPANYPROFILES: CompanyProfiles,
+  HOWITWORKS: HowItWorks,
+  VIDEOGALLERY: VideoGallery,
+  CLIENTTESTIMONIALS: ClientTestimonials,
+  TERMSANDCONDITIONS: TermsAndConditions,
+  SERVICES: Services,
+  CREDIT: Credit,
+  BLOGHOMEPAGE: BlogHomepage,
 };
 
 export { WEB_PAGES };

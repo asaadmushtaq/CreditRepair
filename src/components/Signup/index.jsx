@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
-import { useCookies } from "react-cookie";
+import { ToastContainer } from "react-toastify";
 import { PATH } from "../../config";
 import { Link, useHistory } from "react-router-dom";
 import { Form } from "react-bootstrap";
-import { Loader } from "../../assets/genericComponents/Loader";
 import { FaEnvelope, FaLock } from "react-icons/fa"
 import { IMAGES } from "../../assets";
 import { BsArrowRight } from "react-icons/bs";
@@ -13,8 +11,6 @@ import { BsArrowRight } from "react-icons/bs";
 export default function Signup() {
   let history = useHistory();
   const { register, handleSubmit, errors } = useForm();
-  const [cookies, setCookies] = useCookies();
-  console.log(cookies)
   useEffect(() => {
     document.title = "Signup | Credt Repair";
   }, []);
