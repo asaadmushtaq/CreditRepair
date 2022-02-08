@@ -13,7 +13,7 @@ function CompanyProfiles() {
                 </div>
             </div>
             <div className='row section__padding py-5'>
-                <div className='col-12 col-md-4'>
+                <div className='col-12 col-md-4 align-self-center'>
                     <img src={IMAGES.CREDITREPAIR} alt="" />
                 </div>
                 <div className='col-12 col-md-8 align-self-center'>

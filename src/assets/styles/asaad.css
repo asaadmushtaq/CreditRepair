@@ -193,6 +193,7 @@ a {
     min-width: 210px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 
 .cr__navbar-menu_container p {

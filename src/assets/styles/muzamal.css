@@ -4585,34 +4585,6 @@
   align-items: center;
   padding-left: 15px;
 }
-
-.ant-btn {
-  line-height: 1.499;
-  position: relative;
-  display: inline-block;
-  font-weight: 400;
-  white-space: nowrap;
-  text-align: center;
-  background-image: none;
-  -webkit-box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
-  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
-  cursor: pointer;
-  -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
-  transition: all .3s cubic-bezier(.645, .045, .355, 1);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  height: 32px;
-  padding: 0 15px;
-  font-size: 14px;
-  border-radius: 4px;
-  color: rgba(0, 0, 0, .65);
-  background-color: #fff;
-  border: 1px solid #d9d9d9;
-}
 .global-text-input input[type=date]:not(.recurly),
 .global-text-input input[type=password]:not(.recurly),
 .global-text-input input[type=text]:not(.recurly) {
@@ -4734,111 +4706,40 @@
   width: 100%;
   transition: .11s ease-in;
 }
-input[type=email], input[type=password], input[type=search], input[type=text] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-[role=button], a, area, button, input:not([type=range]), label, select, summary, textarea {
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-}
 .flex {
   display: flex;
 }
-.ant-select-lg {
-  font-size: 16px;
+.create_clients .ant-form-item-label > label{
+  font-size: 12px;
 }
-.ant-select, .ant-select ol, .ant-select ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.create_clients .ant-form-item-label{
+  padding-bottom: 0.1rem;
 }
-.ant-select {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  color: rgba(0,0,0,.65);
+#basic-info .idiq-source-box {
+  padding: 10px 0 10px 10px;
+  border-radius: 6px;
+  border: 1px solid #e2e2e2;
+}
+.user-menu .user-dropdown{
+  color: #000 !important;
+  padding: 5px 15px;
   font-size: 14px;
-  font-variant: tabular-nums;
-  line-height: 1.5;
-  -webkit-font-feature-settings: "tnum";
-  font-feature-settings: "tnum","tnum";
-  position: relative;
-  display: inline-block;
-  outline: 0;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  align-items: center;
 }
-.ant-select-lg .ant-select-selection--single {
+.user-menu .user-dropdown:hover{
+  background-color: transparent !important;
+}
+.create_client_btn{
+  background-color: var(--color-footer);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0 50px;
   height: 40px;
 }
-
-.ant-select-selection--single {
-  position: relative;
-  height: 32px;
-  cursor: pointer;
-}
-.ant-select-selection {
-  display: block;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  background-color: #fff;
-  border: 1px solid #d9d9d9;
-  border-top: 1.02px solid #d9d9d9;
-  border-radius: 4px;
-  outline: none;
-  -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
-  transition: all .3s cubic-bezier(.645,.045,.355,1);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.ant-checkbox-wrapper {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: rgba(0,0,0,.65);
-  font-size: 14px;
-  font-variant: tabular-nums;
-  line-height: 1.5;
-  list-style: none;
-  -webkit-font-feature-settings: "tnum";
-  font-feature-settings: "tnum","tnum";
-  display: inline-block;
-  line-height: unset;
-  cursor: pointer;
-}
-.ant-checkbox {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: rgba(0,0,0,.65);
-  font-size: 14px;
-  font-variant: tabular-nums;
-  line-height: 1.5;
-  list-style: none;
-  -webkit-font-feature-settings: "tnum";
-  font-feature-settings: "tnum","tnum";
-  position: relative;
-  top: -0.09em;
-  display: inline-block;
-  line-height: 1;
-  white-space: nowrap;
-  vertical-align: middle;
-  outline: none;
-  cursor: pointer;
-}
-.ant-checkbox-inner {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  border: 1px solid #d9d9d9;
-  border-radius: 2px;
-  border-collapse: separate;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+#dash-content>:first-child {
+  max-width: 1280px;
+  margin: 0 auto;
 }
