@@ -1,6 +1,6 @@
 import React from 'react';
 import { IMAGES } from '../../../assets';
-import { FooterComponent } from '../../HomePage';
+import { ClientPartners, FooterComponent } from '../../HomePage';
 import Navbar from '../../HomePage/Navbar';
 
 function HowItWorks() {
@@ -17,8 +17,8 @@ function HowItWorks() {
                 <div className='col-12 col-md-8 align-self-center'>
                     <p className='text-light font-16 mb-4 mb-md-0'>Creditciti consulting firm works in 30 – 45-day cycles. Please note that at the end of each cycle you will receive 3 credit reports send to you at your home address. These reports are the results of the dispute letters and challenges that were sent on your behalf, and they will show which questionable negative items that have been removed from your credit report during each round of dispute. You simply fax, email, or mail these reports to Creditciti and then check for your progress update.</p>
                 </div>
-                <div className='col-12 col-md-4 align-self-center'>
-                    <img src={IMAGES.CREDITREPAIR} alt="" />
+                <div className='col-12 col-md-4 d-flex justify-content-center align-self-center'>
+                    <img className='certification-img-class' src={IMAGES.CERTIFICATION} alt="" />
                 </div>
             </div>
 
@@ -39,6 +39,7 @@ function HowItWorks() {
                 <p className='text-light font-16 mt-4 mt-md-0'>$0.00 signup fee</p>
                 <p className='text-light font-16 mt-4 mt-md-0'>$In 7 days, you get it all</p>
             </div>
+            <ClientPartners />
             <FooterComponent />
         </div>
     );

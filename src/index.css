@@ -1,31 +1,29 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 @font-face {
-  font-family: 'SFProRegular';
-  src: local('SFProRegular'), url("./assets/fonts/SFProDisplay-Regular.ttf") format('truetype');
+  font-family: "SFProRegular";
+  src: local("SFProRegular"), url("./assets/fonts/SFProDisplay-Regular.ttf") format("truetype");
 }
 
 :root {
-  --font-family: 'Poppins', sans-serif;
+  --font-family: "Poppins", sans-serif;
 
-  --gradient-text: linear-gradient(89.97deg, #d891f5 1.84%, #FF2e00 102.67%);
-  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
-  
+  --gradient-text: linear-gradient(89.97deg, #fefab9 1.84%, #be9639 102.67%);
+  --gradient-bar: linear-gradient(89.97deg, #fefab9 1.84%, #be9639 102.67%);
+
   --color-bg: rgba(1, 62, 80);
-  --color-footer : #024c62;
+  --color-footer: #024c62;
   --color-blog: #042c54;
   --color-text: #ffffff;
-  --color-subtext: #FF8A71;
+  --color-subtext: #fefab9;
 }

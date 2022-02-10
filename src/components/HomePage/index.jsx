@@ -17,6 +17,7 @@ const Homepage = () => {
         <FeaturesSection />
         <BlogSection />
         <RegisterSection />
+        <ClientPartners />
         {/* Footer Start */}
         <FooterComponent />
         {/* Footer End */}
@@ -59,6 +60,37 @@ export function FooterComponent() {
 
       <div className="cr__footer-copyright">
         <p>@2022 All rights reserved.</p>
+      </div>
+    </div>
+  )
+}
+
+export function ClientPartners() {
+  return (
+    <div>
+      <div className="cr__header section__padding pb-3" id="home">
+        <div className="cr__header-content mr-0">
+          <h1 className="gradient__text">{"Partners"}</h1>
+        </div>
+      </div>
+      <div className='section__padding container pt-0'>
+        <div className='row container'>
+          <div className='col-lg d-flex justify-content-center my-2'>
+            <img src={IMAGES.PARTNER_LOGO_ONE} alt="" />
+          </div>
+          <div className='col-lg d-flex justify-content-center my-2'>
+            <img src={IMAGES.PARTNER_LOGO_TWO} alt="" />
+          </div>
+          <div className='col-lg d-flex justify-content-center my-2'>
+            <img src={IMAGES.PARTNER_LOGO_THREE} alt="" />
+          </div>
+          <div className='col-lg d-flex justify-content-center my-2'>
+            <img src={IMAGES.PARTNER_LOGO_FOUR} alt="" />
+          </div>
+          <div className='col-lg d-flex justify-content-center my-2'>
+            <img src={IMAGES.PARTNER_LOGO_FIVE} alt="" />
+          </div>
+        </div>
       </div>
     </div>
   )

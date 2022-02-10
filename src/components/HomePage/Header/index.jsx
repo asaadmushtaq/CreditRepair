@@ -7,8 +7,8 @@ import { IMAGES } from '../../../assets';
 const Header = () => (
   <div className="cr__header section__padding" id="home">
     <div className="cr__header-content">
-      <h1 className="gradient__text">Professional Credit Repair Software</h1>
-      <p>We provide cutting edge credit repair business software that saves you time by automating the entire dispute process from start to finish.</p>
+      <h1 className="gradient__text">CreditCiti Consulting Firm, LLC.</h1>
+      <p>With over 12 years of experience and many satisfied clients nationwide, you can trust Creditciti to provide you with top quality service and assistance getting your credit back on track. Our expertise makes us one of the best in Credit Repair.</p>
 
       <div className="cr__header-content__input">
         <input type="email" placeholder="Your Email Address" />

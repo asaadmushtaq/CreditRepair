@@ -114,8 +114,8 @@ a {
 }
 
 .cr__navbar-links_logo img {
-    width: 180.56px;
-    height: 37.02px;
+    width: 207.56px;
+    height: 70.02px;
 }
 
 .cr__navbar-links_container {
@@ -152,10 +152,11 @@ a {
 }
 
 .cr__navbar-sign button,
+.tc-button-repair,
 .cr__navbar-menu_container button {
     padding: 0.5rem 1rem;
     color: #fff;
-    background: #ff4820;
+    background: #be9639;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;
@@ -305,8 +306,8 @@ a {
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-    background: #ff4820;
-    border: 2px solid #ff4820;
+    background: #be9639;
+    border: 2px solid #be9639;
     padding: 0 1rem;
     color: #fff;
     cursor: pointer;
@@ -349,8 +350,8 @@ a {
 }
 
 .cr__header-image img {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 50%;
 }
 
 @media screen and (max-width: 1050px) {
@@ -481,8 +482,8 @@ a {
 }
 
 .cr__footer-links_logo img {
-    width: 118px;
-    height: 30px;
+    width: 203px;
+    height: 73px;
 
     margin-bottom: 1rem;
 }
@@ -1044,4 +1045,73 @@ a {
 
 .font-16 {
     font-size: 16px;
+}
+
+.font-24 {
+    font-size: 24px;
+}
+
+.certification-img-class {
+    max-width: 65%;
+}
+
+.client-testimonial-img-class {
+    max-width: 50%;
+    border-radius: 50%;
+}
+
+.client-testimonials-card {
+    border: none;
+    border-radius: 12px;
+    background: var(--color-footer);
+}
+
+.pdf-logo-class-tc {
+    color: var(--color-subtext);
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.gradient__subtext {
+    color: var(--color-subtext);
+}
+
+.gradient__bar {
+    background: var(--gradient-bar);
+    height: 5px;
+    border-radius: 5px;
+}
+
+.services-img-right-side {
+    object-fit: cover;
+    height: 500px !important;
+    border-bottom-left-radius: 30px;
+    max-width: 100%;
+}
+
+.services-img-left-side {
+    object-fit: cover;
+    height: 500px !important;
+    border-bottom-right-radius: 30px;
+    max-width: 100%;
+}
+
+.font-30 {
+    font-size: 30px;
+}
+
+.services-right-side-container {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .services-right-side-container {
+        flex-direction: column-reverse;
+    }
+}
+
+.gallery-video-custom-class {
+    width: 80%;
 }
