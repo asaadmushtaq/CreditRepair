@@ -12,7 +12,7 @@ function Services() {
                     <h1 className="gradient__text">Services</h1>
                 </div>
             </div>
-            <div className='p-3'>
+            <div className='p-3 bg-white'>
                 <div className='row my-4 services-right-side-container'>
                     <div className='col-12 col-md-7 d-flex justify-content-center align-self-center'>
                         <p className='gradient__subtext font-30'>
@@ -31,7 +31,7 @@ function Services() {
                         <p className='gradient__subtext font-30'>
                             {"Our Credit Experts Help You With the Following Disputes and Removals"}
                         </p>
-                        <ol className='ml-3 text-light font-16'>
+                        <ol className='ml-3 font-16'>
                             <li>Bankruptcy</li>
                             <li>Public Records</li>
                             <li>Repossessions</li>

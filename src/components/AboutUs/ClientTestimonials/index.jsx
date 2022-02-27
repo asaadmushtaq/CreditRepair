@@ -6,43 +6,45 @@ import Navbar from '../../HomePage/Navbar';
 
 function ClientTestimonials() {
     return (
-        <div>
+        <>
             <Navbar />
-            <div className="cr__header section__padding pb-3" id="home">
-                <div className="cr__header-content mr-0">
-                    <h1 className="gradient__text">Client Testimonials</h1>
+            <div className='bg-white'>
+                <div className="cr__header section__padding pb-3" id="home">
+                    <div className="cr__header-content mr-0">
+                        <h1 className="gradient__text">Client Testimonials</h1>
+                    </div>
                 </div>
-            </div>
-            <div className='row section__padding'>
-                {
-                    clientTestimonialsData.map((item, index) => {
-                        return (
-                            <div className='col-12' key={index}>
-                                <Card className='client-testimonials-card shadow'>
-                                    <Card.Body>
-                                        <div className='row d-flex'>
-                                            <div className='col-12 col-md-2 d-flex align-self-center justify-content-center'>
-                                                <img className='client-testimonial-img-class' src={IMAGES.AVATAR} alt="" />
+                <div className='row section__padding'>
+                    {
+                        clientTestimonialsData.map((item, index) => {
+                            return (
+                                <div className='col-12' key={index}>
+                                    <Card className='client-testimonials-card shadow'>
+                                        <Card.Body>
+                                            <div className='row d-flex'>
+                                                <div className='col-12 col-md-2 d-flex align-self-center justify-content-center'>
+                                                    <img className='client-testimonial-img-class' src={IMAGES.AVATAR} alt="" />
+                                                </div>
+                                                <div className='col-12 col-md-10 align-self-center mt-4 mt-md-0'>
+                                                    <p className='text-light font-16'>
+                                                        {item.comment}
+                                                    </p>
+                                                    <p className='text-light font-weight-bold font-16'>
+                                                        {item.location}
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div className='col-12 col-md-10 align-self-center mt-4 mt-md-0'>
-                                                <p className='text-light font-16'>
-                                                    {item.comment}
-                                                </p>
-                                                <p className='text-light font-weight-bold font-16'>
-                                                    {item.location}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                            </div>
-                        )
-                    })
-                }
+                                        </Card.Body>
+                                    </Card>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <ClientPartners />
+                <FooterComponent />
             </div>
-            <ClientPartners />
-            <FooterComponent />
-        </div>
+        </>
     );
 };
 

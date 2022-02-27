@@ -1,4 +1,5 @@
 import React from 'react';
+import { ClientPartners, FooterComponent } from '../HomePage';
 import Navbar from '../HomePage/Navbar';
 
 export default function ContactUs() {
@@ -21,6 +22,8 @@ export default function ContactUs() {
                         <p>United States</p>
                     </div>
                 </div>
+                <ClientPartners />
+                <FooterComponent />
             </div>
         </div>
     )

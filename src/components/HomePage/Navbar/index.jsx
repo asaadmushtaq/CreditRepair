@@ -36,6 +36,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className="cr__navbar-sign">
+        <Link to={PATH.LOGIN}>
+          <p>Sign in</p>
+        </Link>
         <Link to={PATH.CONTACTUS}><button type="button">Contact Us</button></Link>
       </div>
       <div className="cr__navbar-menu">
@@ -59,6 +62,9 @@ const Navbar = () => {
               <p><Link to={PATH.BLOGHOMEPAGE}>Blog</Link></p>
             </div>
             <div className="cr__navbar-menu_container-links-sign">
+              <Link to={PATH.LOGIN}>
+                <p>Sign in</p>
+              </Link>
               <Link to={PATH.CONTACTUS}><button type="button">Contact Us</button></Link>
             </div>
           </div>

@@ -67,7 +67,7 @@ export function FooterComponent() {
 
 export function ClientPartners() {
   return (
-    <div>
+    <div className='bg-white'>
       <div className="cr__header section__padding pb-3" id="home">
         <div className="cr__header-content mr-0">
           <h1 className="gradient__text">{"Partners"}</h1>

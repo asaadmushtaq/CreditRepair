@@ -42,7 +42,7 @@ const Feature = ({ title, text }) => (
             <h1 className='text-left'>{title}</h1>
         </div>
         <div className="cr__features-container_feature-text">
-            <p className='text-left'>{text}</p>
+            <p className='text-left red-text-class'>{text}</p>
         </div>
     </div>
 );

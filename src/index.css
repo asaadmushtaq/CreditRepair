@@ -18,12 +18,12 @@ code {
 :root {
   --font-family: "Poppins", sans-serif;
 
-  --gradient-text: linear-gradient(89.97deg, #fefab9 1.84%, #be9639 102.67%);
-  --gradient-bar: linear-gradient(89.97deg, #fefab9 1.84%, #be9639 102.67%);
+  --gradient-text: linear-gradient(89.97deg, #af2528 1.84%, #af2528 102.67%);
+  --gradient-bar: linear-gradient(89.97deg, #af2528 1.84%, #af2528 102.67%);
 
-  --color-bg: rgba(1, 62, 80);
-  --color-footer: #024c62;
+  --color-bg: #555f77;
+  --color-footer: #fff;
   --color-blog: #042c54;
   --color-text: #ffffff;
-  --color-subtext: #fefab9;
+  --color-subtext: #af2528;
 }
