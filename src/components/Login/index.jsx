@@ -65,7 +65,7 @@ export default function Login() {
                 />
               )}
               <div className="cr__navbar-links_logo mr-0 text-center mb-5">
-                <img src={IMAGES.CREDITREPAIRGREEN} className="img-fluid" alt="" />
+                <img src={IMAGES.CREDITREPAIR} className="img-fluid" alt="" />
               </div>
               <span className="login100-form-title pb-3">
                 Member Login
