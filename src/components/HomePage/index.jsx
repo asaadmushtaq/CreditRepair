@@ -10,10 +10,15 @@ import WhatIsCR from './WhatIsCR';
 const Homepage = () => {
   return (
     <div className="App">
+      <Navbar />
       <div className="gradient__bg">
-        <Navbar />
+
         <Header />
+      </div>
+      <div className="gradient__bg_secondary">
         <WhatIsCR />
+      </div>
+      <div className="gradient__bg">
         <FeaturesSection />
         <BlogSection />
         <RegisterSection />
@@ -21,6 +26,7 @@ const Homepage = () => {
         {/* Footer Start */}
         <FooterComponent />
         {/* Footer End */}
+
 
       </div>
     </div>

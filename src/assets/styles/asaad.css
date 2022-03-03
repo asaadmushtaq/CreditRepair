@@ -14,20 +14,26 @@ a {
     text-decoration: none;
 }
 
+.gradient__bg_secondary {
+    background-color: #f7f7f7;
+}
+
 .gradient__bg {
-    background: -moz-radial-gradient(circle at 3% 25%, #555f77 0%, #555f77 25%);
+    background-color: #ddd;
+
+    /* background: -moz-radial-gradient(circle at 3% 25%, #555f77 0%, #555f77 25%);
 
     /* safari 5.1+,chrome 10+ */
-    background: -webkit-radial-gradient(circle at 3% 25%, #555f77 0%, #555f77 25%);
+    /* background: -webkit-radial-gradient(circle at 3% 25%, #555f77 0%, #555f77 25%); */
 
     /* opera 11.10+ */
-    background: -o-radial-gradient(circle at 3% 25%, #555f77 0%, #555f77 25%);
+    /* background: -o-radial-gradient(circle at 3% 25%, #555f77 0%, #555f77 25%); */
 
     /* ie 10+ */
-    background: -ms-radial-gradient(circle at 3% 25%, #555f77 0%, #555f77 25%);
+    /* background: -ms-radial-gradient(circle at 3% 25%, #555f77 0%, #555f77 25%); */
 
     /* global 92%+ browsers support */
-    background: radial-gradient(circle at 3% 25%, #555f77 0%, #555f77 25%);
+    /* background: radial-gradient(circle at 3% 25%, #555f77 0%, #555f77 25%); */
 }
 
 .gradient__text {
@@ -55,6 +61,7 @@ a {
         -webkit-transform: scale(0.5);
         transform: scale(0.5);
     }
+
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -66,6 +73,7 @@ a {
         -webkit-transform: scale(0.5);
         transform: scale(0.5);
     }
+
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -99,6 +107,8 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 6rem;
+    background-color: #fff;
+    border-bottom: 1px solid #44444438;
 }
 
 .cr__navbar-links {
@@ -113,8 +123,9 @@ a {
 }
 
 .cr__navbar-links_logo img {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
 }
 
 .cr__navbar-links_container {
@@ -132,7 +143,7 @@ a {
 .cr__navbar-links_container p,
 .cr__navbar-sign p,
 .cr__navbar-menu_container p {
-    color: #fff;
+    color: #444;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;
@@ -146,6 +157,7 @@ a {
 .cr__navbar-links_container p a:focus {
     color: #af2528;
 }
+
 .cr__navbar-links_container p a:hover {
     color: #af2528;
 }
@@ -166,7 +178,7 @@ a {
     border-radius: 5px;
 }
 
-.tc-button-repair{
+.tc-button-repair {
     border: 1px solid #af2528;
 }
 
@@ -273,7 +285,7 @@ a {
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-    color: #af2528;
+    color: #444;
 }
 
 .cr__header-content__input {
@@ -426,7 +438,7 @@ a {
     justify-content: center;
     align-items: center;
 
-    background: #555f77;
+    background: #444;
 }
 
 .cr__footer-heading {
@@ -573,7 +585,7 @@ a {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    background: #555f77 !important;
+    background: #f7f7f7 !important;
     /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
 
@@ -652,6 +664,7 @@ a {
 }
 
 @media screen and (max-width: 650px) {
+
     /* Customizing feature component as per needs */
     .cr__whatcr-feature .cr__features-container__feature {
         flex-direction: column;
@@ -669,16 +682,18 @@ a {
 }
 
 @media screen and (max-width: 350px) {
+
     /* Customizing feature component as per needs */
     .cr__whatcr-container .cr__features-container__feature {
         margin: 1rem 0;
         min-width: 100%;
     }
 }
+
 .cr__features-container__feature {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: flex-start;
     flex-direction: row;
 
@@ -723,7 +738,7 @@ a {
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    color: #fff;
+    color: #444 !important;
 }
 
 @media screen and (max-width: 550px) {
@@ -1033,18 +1048,19 @@ a {
 
 /* Basic CSS */
 .about-us-btn-class {
-    color: #fff !important;
+    color: #444 !important;
     font-weight: 500;
     padding: 0;
-    background-color: #555f77 !important;
-    border-color: #555f77 !important;
+    background-color: #fff !important;
+    border-color: #fff !important;
     font-size: 18px;
     transition: 0.3s ease-in-out;
 }
 
 .about-us-btn-class:hover,
+.show>.about-us-btn-class.dropdown-toggle,
 .about-us-btn-class:focus {
-    color: #af2528;
+    color: #af2528 !important;
 }
 
 .dropdown:not(.custom-dropdown-icon) .dropdown-menu a.dropdown-item {

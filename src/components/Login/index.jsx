@@ -64,7 +64,7 @@ export default function Login() {
                   type="hidden"
                 />
               )}
-              <div className="cr__navbar-links_logo mr-0 text-center mb-5">
+              <div className="login_logo mr-0 text-center mb-5">
                 <img src={IMAGES.CREDITREPAIR} className="img-fluid" alt="" />
               </div>
               <span className="login100-form-title pb-3">
