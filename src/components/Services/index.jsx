@@ -45,6 +45,7 @@ function Services() {
                             <li>Liens</li>
                             <li>Reporting Errors</li>
                             <li>Charge-Offs</li>
+                            <li>Student Loan</li>
                         </ol>
                     </div>
                 </div>

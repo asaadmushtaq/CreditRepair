@@ -16,6 +16,7 @@ import TermsAndConditions from "./AboutUs/Terms&Conditions";
 import Services from "./Services";
 import Credit from "./Credit";
 import BlogHomepage from "./BlogHomepage";
+import PricingPlan from "./PricingPlan";
 
 // class DynamicImport extends React.Component {
 //   state = {
@@ -58,6 +59,7 @@ const WEB_PAGES = {
   SERVICES: Services,
   CREDIT: Credit,
   BLOGHOMEPAGE: BlogHomepage,
+  PRICINGPLAN: PricingPlan,
 };
 
 export { WEB_PAGES };

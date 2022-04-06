@@ -20,6 +20,7 @@ const PATH = {
   SERVICES: "/services",
   CREDIT: "/credit",
   BLOGHOMEPAGE: "/blog-homepage",
+  PRICINGPLAN: "/pricing-plan",
 };
 
 const baseUrl = "https://randoxapi.xevensolutions.com/api/";

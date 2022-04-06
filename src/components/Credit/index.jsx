@@ -1,5 +1,5 @@
 import React from 'react';
-import { IMAGES } from '../../assets';
+import { IMAGES, PDF } from '../../assets';
 import { ClientPartners, FooterComponent } from '../HomePage';
 import Navbar from '../HomePage/Navbar';
 
@@ -14,7 +14,7 @@ function Credit() {
             </div>
             <div className='section__padding pt-0 bg-white'>
                 <h3 className='gradient__subtext'>
-                    {"The biggest issue with having poor credit is all the ways that it can affect your life today, tomorrow, and in the future."}
+                    {"The biggest issue having poor credit is that   it can effect your life today tomorrow and in future because poor credit is very costly."}
                 </h3>
                 <ul className='ml-3 font-16 text-justify'>
                     <li>High interest rates on your credit cards and loans</li>
@@ -44,10 +44,18 @@ function Credit() {
                     {"Making Late Payments"}
                 </h3>
                 <p className='font-16 text-justify'>
-                    {"The largest factor determining your credit score is your payment history, making it extremely important to avoid paying any of your bills late. Obviously this includes any type of financing payments, like credit cards, student loans, mortgage, car loans, and any other kind of personal loan. But even things like your cell phone bill or utility payments have the potential to impact your credit report if you leave them unpaid for too long."}
-                </p>
-                <p className='font-16 text-justify'>
-                    {"Your creditor can of course charge late payments according to your user agreement, so it’s always smart to pay by the due date. If you do happen to miss that, you have 30 days until the late payment can be reported to the credit bureaus. Once a negative item like that appears on your report, it can stay there for seven years, unless there’s been some type of credit error."}
+                    {`The largest factor determining your credit score is your payment history,
+                     making it extremely important to avoid paying any of your bills late. 
+                     Obviously this includes any type of financing payments, like credit cards, 
+                     student loans, mortgage, car loans, and any other kind of personal loan. 
+                     But even things like your cell phone bill or
+                      utility payments have the potential to impact your credit report if you leave them unpaid for too long.
+                      Your creditor can of course charge late payments according to your user agreement, 
+                      so it’s always smart to pay by the due date. If you do happen to miss that,
+                       you have 30 days until the late payment can be reported to the credit bureaus.
+                        Once a negative item like that appears on your report, 
+                      it can stay there for seven years, unless there’s been some type of credit error.
+                      `}
                 </p>
                 <br />
 
@@ -80,9 +88,11 @@ function Credit() {
                 </p>
                 <br />
 
-                <button className="tc-button-repair">
-                    {"Click for Credit Repair Organizations Act"}
-                </button>
+                <a href={PDF.CREDIT_ORGANIZATIONS} target="_blank" rel="noreferrer" download>
+                    <button className="tc-button-repair">
+                        {"Click for Credit Repair Organizations Act"}
+                    </button>
+                </a>
 
                 <div className='mt-4'>
                     <img src={IMAGES.CREDITCIRCLECHART} alt="" />

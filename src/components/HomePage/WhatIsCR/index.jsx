@@ -10,9 +10,9 @@ const WhatIsCR = () => (
             <p>Explore</p>
         </div>
         <div className="cr__whatcr-container">
-            <Feature title="Dispute Reasons" text="Dispute Reasons, and the Dispute Types, saves you up to 90% of your valuable time and avoids errors and mental fatigue when selecting letters and dispute reasons." />
-            <Feature title="Three-Line Approach" text="This approach allows you to detect, very quickly, discrepancies between Creditor’s Names, Account’s IDs, Open Dates, Balances, etc." />
-            <Feature title="Speed & Power" text="Credit Repair is designed for speed and power, to save you time and to empower you with the tools that will make your work easier, faster, and accurate." />
+            <Feature title="Dispute Reasons" text="Dispute Reasons, and Dispute Types, saves you up to 90% of your valuable time and avoids errors and mental fatigue when selecting letters and dispute reasons." />
+            <Feature title="Three-Line Approach" text="This allows you to analyze the report in seconds, detect discrepancies quickly with the three major credit burro  and creditor credit report and scopes in order to begin the dispute process" />
+            <Feature title="Speed & Power" text="Credit Repair is designed for speed and power, to save you time and to empower you with the tools that will make your work easier, faster, accurate and user friendly." />
         </div>
     </div>
 );

@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="cr__navbar-links_container">
           <p><Link to={PATH.HOMEPAGE}>Home</Link></p>
           <p>
-            <Dropdown>
+            {/* <Dropdown>
               <Dropdown.Toggle className='about-us-btn-class' id="dropdown-basic">
                 About Us
               </Dropdown.Toggle>
@@ -28,7 +28,17 @@ const Navbar = () => {
                 <Dropdown.Item href={PATH.CLIENTTESTIMONIALS}>{"Client Testimonials"}</Dropdown.Item>
                 <Dropdown.Item href={PATH.TERMSANDCONDITIONS}>{"Terms & Conditions"}</Dropdown.Item>
               </Dropdown.Menu>
-            </Dropdown>
+            </Dropdown> */}
+            <div className="dropdown">
+              <button className='about-us-btn-class dropbtn'>About Us</button>
+              <div className="dropdown-content">
+                <a href={PATH.COMPANYPROFILES}>{"Company Profiles"}</a>
+                <a href={PATH.HOWITWORKS}>{"How it Works"}</a>
+                <a href={PATH.VIDEOGALLERY}>{"Video Gallery"}</a>
+                <a href={PATH.CLIENTTESTIMONIALS}>{"Client Testimonials"}</a>
+                <a href={PATH.TERMSANDCONDITIONS}>{"Terms & Conditions"}</a>
+              </div>
+            </div>
           </p>
           <p><Link to={PATH.SERVICES}>Services</Link></p>
           <p><Link to={PATH.CREDIT}>Credit</Link></p>
@@ -36,12 +46,12 @@ const Navbar = () => {
         </div>
       </div>
       <div className="cr__navbar-sign">
-        <Link to={PATH.LOGIN}>
+        <Link to={PATH.PRICINGPLAN}>
           <p>Sign in</p>
         </Link>
         <Link to={PATH.CONTACTUS}><button type="button">Contact Us</button></Link>
       </div>
-      <div className="cr__navbar-menu">
+      <div className="cr__navbar-menu border rounded">
         {toggleMenu
           ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
           : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}

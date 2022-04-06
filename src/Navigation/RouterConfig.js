@@ -68,6 +68,9 @@ export const RouterConfig = () => {
         <PublicRoute exact path={PATH.BLOGHOMEPAGE}>
           <WEB_PAGES.BLOGHOMEPAGE />
         </PublicRoute>
+        <PublicRoute exact path={PATH.PRICINGPLAN}>
+          <WEB_PAGES.PRICINGPLAN />
+        </PublicRoute>
         <Route path={PATH.NOPAGE} component={WEB_PAGES.NOPAGE} />
       </Switch>
     </div>

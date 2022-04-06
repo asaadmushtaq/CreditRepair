@@ -3,7 +3,7 @@ import React from 'react';
 const FeaturesSection = () => (
     <div className="cr__features section__padding" id="features">
         <div className="cr__features-heading">
-            <h1 className="gradient__text">Credit Repair is the most automated credit repair software in the industry right now.</h1>
+            <h1 className="gradient__text">Creditciti software is the most automated creditciti software in the industry right now.</h1>
             <p>Request Early Access to Get Started</p>
         </div>
         <div className="cr__features-container">
@@ -19,15 +19,17 @@ export default FeaturesSection;
 const featuresData = [
     {
         title: 'Cloud Compatible',
-        text: 'Credit Repair is in-the-cloud, so you can access it from any device and from anywhere in the world.',
+        text: 'Creditciti is in-the-cloud, so you can access it from any device and from anywhere in the world.',
     },
     {
         title: 'No Comparison',
-        text: 'We don’t do credit repair services like others. We only sell software, we don’t compete with our clients.',
+        text: 'We don’t do credit repair services like other we use cutting edge state of the art software that is cloud base. We also help our client to remove all negative attempts from their credit reports in reasonable amount of time legally permanently from their credit report.',
     },
     {
-        title: 'Privacy Matters',
-        text: 'Your program database is not shared with other of our clients. This feature ensures that another of our clients cannot access your clients.',
+        title: 'Privacy and Security Matter',
+        text: `Creditciti database is not shared with any of our clients. This feature ensures that no one can access our database. we use encrypted coding language to secure our client data.
+        your information: creditciti client portals are hosted inside our website for security reasons, so our company is protected against cyber criminals and identity theft.
+        `,
     },
     {
         title: 'Your Information',

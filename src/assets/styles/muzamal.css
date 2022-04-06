@@ -5753,3 +5753,205 @@
   height: 100px;
   object-fit: contain;
 }
+
+/* Create three columns of equal width */
+.columns {
+  float: left;
+  width: 50%;
+  padding: 8px;
+}
+
+/* Style the list */
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Add shadows on hover */
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2)
+}
+
+/* Pricing header */
+.price .Header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
+/* List items */
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+  font-family: var(--font-family);
+}
+
+/* Grey list item */
+.price .grey {
+  background-color: #222162;
+  font-size: 20px;
+  font-family: var(--font-family);
+}
+
+.price .grey h1 {
+  font-size: 3.14285714em;
+  font-family: var(--font-family);
+  line-height: 1.31818182em;
+  font-weight: 500;
+}
+
+.price strong,
+section.space--xs strong {
+  font-weight: 500;
+}
+
+section.space--xs .font-weight-normal {
+  font-weight: 100 !important;
+}
+
+.price p {
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgb(0 0 0 / 20%);
+}
+
+/* The "Sign Up" button */
+.get_started_button {
+  background-color: #222162;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
+.get_started_button:hover {
+  color: #0089bc;
+}
+
+/* Change the width of the three columns to 100% 
+(to stack horizontally on small screens) */
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+
+section.space--xs {
+  padding-top: 3.71428571em;
+  padding-bottom: 3.71428571em;
+}
+
+section.space--sm {
+  padding-bottom: 3.71428571em;
+}
+
+/* Dropdown Button */
+.cr__navbar-links_container .dropbtn {
+  color: white;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.cr__navbar-links_container .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.cr__navbar-links_container .dropdown-content {
+  display: none;
+  min-width: 12rem;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 15px 1px rgb(113 106 202 / 20%);
+  padding: 10px;
+  text-align: left;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.cr__navbar-links_container .dropdown-content a {
+  color: #af2528 !important;
+  font-weight: 700;
+  padding: 11px 8px;
+  font-size: 14px !important;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.cr__navbar-links_container .dropdown-content a:hover {
+  background-color: #f1f2f3;
+}
+
+/* Show the dropdown menu on hover */
+.cr__navbar-links_container .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.cr__navbar-links_container .dropdown:hover .dropbtn {
+  background-color: #af2528;
+}
+
+.contact_us .bg-primary {
+  background-color: #af2528 !important;
+}
+
+.contact_us .info-wrap,
+.contact_us .text,
+.contact_us h2,
+.contact_us p {
+  color: #fff;
+}
+
+.contact_us .contactForm .label {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.contact_us .contactForm .form-control {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+.contact_us .info-wrap .dbox p span {
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact_us .info-wrap .dbox {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+}
+
+.contact_us .info-wrap .dbox .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact_us .info-wrap .dbox .icon span {
+  font-size: 20px;
+  color: #fff;
+}

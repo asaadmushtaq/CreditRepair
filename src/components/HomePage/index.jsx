@@ -59,13 +59,15 @@ export function FooterComponent() {
         <div className="cr__footer-links_div">
           <h4>Get in touch</h4>
           <p>Crechterwoord K12 182 DK Alknjkcb</p>
-          <p>085-132567</p>
-          <p>info@payme.net</p>
+          <p>Office - (877) 775-6106</p>
+          <p>Fax - (888) 558.5329</p>
+          <p>Email - jmorris@creditciti.com</p>
+          <p>Address - 11720 Beltsville Dr Suite 500-M1, Beltsville MD, US 20705</p>
         </div>
       </div>
 
       <div className="cr__footer-copyright">
-        <p>@2022 All rights reserved.</p>
+        <p>© 2018 - All Rights Reserved - Website by Iron Web Designs, Inc.</p>
       </div>
     </div>
   )

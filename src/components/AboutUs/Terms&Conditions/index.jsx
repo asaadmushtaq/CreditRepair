@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsFileEarmarkPdf } from 'react-icons/bs';
+import { PDF } from '../../../assets';
 import { ClientPartners, FooterComponent } from '../../HomePage';
 import Navbar from '../../HomePage/Navbar';
 
@@ -15,53 +16,65 @@ function TermsAndConditions() {
                 </div>
                 <div className='container section__padding'>
                     <div className='row'>
-                        <div className='col-6 col-md-4 mb-5'>
-                            <div className='text-center cursor'>
-                                <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
-                            </div>
-                            <p className='text-center cursor mt-3'>
-                                {"Affiliate Agreement"}
-                            </p>
+                        <div className='col-6 col-md-4 mb-5 text-center'>
+                            <a href={PDF.AFFILIATE} target="_blank" rel="noreferrer" download>
+                                <div className='cursor'>
+                                    <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
+                                </div>
+                                <p className='text-center cursor mt-3'>
+                                    {"Affiliate Agreement"}
+                                </p>
+                            </a>
                         </div>
-                        <div className='col-6 col-md-4 mb-5'>
-                            <div className='text-center cursor'>
-                                <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
-                            </div>
-                            <p className='text-center cursor mt-3'>
-                                {"Intake Forms"}
-                            </p>
+                        <div className='col-6 col-md-4 mb-5 text-center'>
+                            <a href={PDF.INTAKE_FORMS} target="_blank" rel="noreferrer" download>
+                                <div className='cursor'>
+                                    <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
+                                </div>
+                                <p className='text-center cursor mt-3'>
+                                    {"Intake Forms"}
+                                </p>
+                            </a>
                         </div>
-                        <div className='col-6 col-md-4 mb-5'>
-                            <div className='text-center cursor'>
-                                <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
-                            </div>
-                            <p className='text-center cursor mt-3'>
-                                {"Pay Per Deletion"}
-                            </p>
+                        <div className='col-6 col-md-4 mb-5 text-center'>
+                            <a href={PDF.PAY_DELETION} target="_blank" rel="noreferrer" download>
+                                <div className='cursor'>
+                                    <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
+                                </div>
+                                <p className='text-center cursor mt-3'>
+                                    {"Pay Per Deletion"}
+                                </p>
+                            </a>
                         </div>
-                        <div className='col-6 col-md-4 mb-5'>
-                            <div className='text-center cursor'>
-                                <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
-                            </div>
-                            <p className='text-center cursor mt-3'>
-                                {"Repair Agreement"}
-                            </p>
+                        <div className='col-6 col-md-4 mb-5 text-center'>
+                            <a href={PDF.REPAIR_AGREEMENT} target="_blank" rel="noreferrer" download>
+                                <div className='cursor'>
+                                    <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
+                                </div>
+                                <p className='text-center cursor mt-3'>
+                                    {"Repair Agreement"}
+                                </p>
+                            </a>
                         </div>
-                        <div className='col-6 col-md-4 mb-5'>
-                            <div className='text-center cursor'>
-                                <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
-                            </div>
-                            <p className='text-center cursor mt-3'>
-                                {"Credit Restoration Agreement"}
-                            </p>
+                        <div className='col-6 col-md-4 mb-5 text-center'>
+                            <a href={PDF.CREDIT_AGREEMENT} target="_blank" rel="noreferrer" download>
+                                <div className='cursor'>
+                                    <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
+                                </div>
+                                <p className='text-center cursor mt-3'>
+                                    {"Credit Restoration Agreement"}
+                                </p>
+                            </a>
                         </div>
-                        <div className='col-6 col-md-4 mb-5'>
-                            <div className='text-center cursor'>
-                                <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
-                            </div>
-                            <p className='text-center cursor mt-3'>
-                                {"Data Furnisher Communication"}
-                            </p>
+                        <div className='col-6 col-md-4 mb-5 text-center'>
+                            <a href={PDF.DATA_COMMUNICATION} target="_blank" rel="noreferrer" download>
+                                <div className='cursor'>
+                                    <BsFileEarmarkPdf className='pdf-logo-class-tc' size={60} />
+                                </div>
+                                <p className='text-center cursor mt-3'>
+                                    {"Data Furnisher Communication"}
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -196,10 +209,11 @@ function TermsAndConditions() {
                     </p>
 
                     <br />
-
-                    <button className="tc-button-repair">
-                        {"Click for Credit Repair Organizations Act"}
-                    </button>
+                    <a href={PDF.CREDIT_ORGANIZATIONS} target="_blank" rel="noreferrer" download>
+                        <button className="tc-button-repair">
+                            {"Click for Credit Repair Organizations Act"}
+                        </button>
+                    </a>
                 </div>
                 <ClientPartners />
                 <FooterComponent />
