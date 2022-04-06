@@ -2,6 +2,8 @@ import React from 'react';
 import { ClientPartners, FooterComponent } from '../HomePage';
 import Navbar from '../HomePage/Navbar';
 import { IoLocationSharp } from "react-icons/io5"
+import { BsFillTelephoneFill } from "react-icons/bs"
+import { FaPaperPlane } from "react-icons/fa"
 
 export default function ContactUs() {
     return (
