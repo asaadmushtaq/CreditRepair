@@ -89,7 +89,7 @@ export function Header() {
         <ul className="nav user-menu">
           <li className="nav-item dropdown has-arrow">
             <div className="d-inline-flex align-items-center h-100">
-              <Dropdown overlay={menu} trigger={['click']} className="user-dropdown">
+              <Dropdown overlay={menu()} trigger={['click']} className="user-dropdown">
                 <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                   <AiOutlineUser />  My Account <DownOutlined className="ml-1" />
                 </a>
@@ -136,21 +136,24 @@ export function Header() {
     </>
   );
 }
-const menu = (
-  <Menu>
-    {auth.credit_repair_user.role === ROLE.CLIENT &&
-      <Menu.Item key="0">
-        <a href={PATH.ADMIN_SETTINGS}><AiOutlineSetting className="mr-3" />Settings</a>
+function menu() {
+  const auth = useAuth();
+  return (
+    <Menu>
+      {auth.credit_repair_user.role === ROLE.CLIENT &&
+        <Menu.Item key="0">
+          <a href={PATH.ADMIN_SETTINGS}><AiOutlineSetting className="mr-3" />Settings</a>
+        </Menu.Item>
+      }
+      <Menu.Item key="1">
+        <a href="#"><AiOutlineCreditCard className="mr-3" />Billing</a>
       </Menu.Item>
-    }
-    <Menu.Item key="1">
-      <a href="#"><AiOutlineCreditCard className="mr-3" />Billing</a>
-    </Menu.Item>
-    <Menu.Item key="1">
-      <a href="#"><BiHelpCircle className="mr-3" />Help</a>
-    </Menu.Item>
-    <Menu.Item key="1">
-      <SignOut />
-    </Menu.Item>
-  </Menu>
-)
+      <Menu.Item key="1">
+        <a href="#"><BiHelpCircle className="mr-3" />Help</a>
+      </Menu.Item>
+      <Menu.Item key="1">
+        <SignOut />
+      </Menu.Item>
+    </Menu>
+  )
+}

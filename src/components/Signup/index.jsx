@@ -33,7 +33,7 @@ export default function Signup() {
     console.log(data);
     data = { ...data, roleId: parseInt(roleId) }
     dispatch(Register(data, setCookiesforUser, Notificiation, setUserID))
-    // history.push(PATH.LOGIN);
+    history.push(PATH.LOGIN);
   }
   function setCookiesforUser(data) {
     Notificiation()

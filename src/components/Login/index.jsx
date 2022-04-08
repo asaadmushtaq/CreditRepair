@@ -86,7 +86,7 @@ export default function Login() {
               <div className="wrap-input100 validate-input">
                 <div className="form-group">
                   <select name="userRoleId"
-                    className="form-select Input_login inner-salet py-3 w-100 select_cust select_Custom input100"
+                    className="form-select Input_login inner-salet select_Custom input100"
                     aria-label="Default select example"
                     onChange={(e) => { selectRole(e.target.value) }}>
                     <option>Select Role</option>
