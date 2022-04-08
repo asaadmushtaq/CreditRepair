@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { IMAGES } from "../../assets/images";
 import { Loader } from "../../assets";
-import { PATH } from "../../config";
+import { PATH, ROLE } from "../../config";
 import { FaBars } from "react-icons/fa";
 import { useAuth } from "../../Navigation/Auth/ProvideAuth";
 import { Link, useHistory } from "react-router-dom";
@@ -23,7 +23,7 @@ export function Header() {
       <div className="header">
         {/* Logo */}
         <div className="header-left">
-          <Link to={PATH.ADMINCLIENTS} className="logo mr-0">
+          <Link to={PATH.DASHBOARD} className="logo mr-0">
             <img src={IMAGES.CREDITREPAIR} alt="Logo" className="img-fluid" />
           </Link>
         </div>
@@ -31,10 +31,35 @@ export function Header() {
           <a href="javascript:void(0)" id="toggle_btn">
             <FaBars className="toggleset" />
           </a>
-          {auth.credit_repair_user.userType === "Admin" && (
+          {auth.credit_repair_user.role === ROLE.BUSINESS && (
             <>
               {
-                history.location.pathname === PATH.ADMINDASHBOARD ? (
+                history.location.pathname === PATH.DASHBOARD ||
+                  history.location.pathname === PATH.ADMINDASHBOARD ? (
+                  <h3 className="ml-4">{`Home`}</h3>
+                ) : (
+                  <></>
+                )}
+              {
+                history.location.pathname === PATH.ADMINCLIENTS ||
+                  history.location.pathname === PATH.CREATENEWCLIENT ? (
+                  <h3 className="ml-4">{`Clients`}</h3>
+                ) : (
+                  <></>
+                )}
+              {
+                history.location.pathname === PATH.ADMINLETTERLIBRARY ? (
+                  <h3 className="ml-4">{`Letter Library`}</h3>
+                ) : (
+                  <></>
+                )}
+            </>
+          )}
+          {auth.credit_repair_user.role === ROLE.CLIENT && (
+            <>
+              {
+                history.location.pathname === PATH.DASHBOARD ||
+                  history.location.pathname === PATH.CLIENTDASHBOARD ? (
                   <h3 className="ml-4">{`Home`}</h3>
                 ) : (
                   <></>
@@ -77,7 +102,7 @@ export function Header() {
                 className="user_dropdown"
               >
                 <span className="user-img mt-0">
-                  <FaUser className="mr-2 mb-1" />My Account
+                  <AiOutlineUser className="mr-2 mb-1" />My Account
                 </span>
               </Dropdown.Toggle>
 
@@ -112,15 +137,12 @@ export function Header() {
   );
 }
 const menu = (
-
   <Menu>
-
-    <Menu.Item key="0">
-
-
-      <a href={PATH.ADMIN_SETTINGS}><AiOutlineSetting className="mr-3" />Settings</a>
-
-    </Menu.Item>
+    {auth.credit_repair_user.role === ROLE.CLIENT &&
+      <Menu.Item key="0">
+        <a href={PATH.ADMIN_SETTINGS}><AiOutlineSetting className="mr-3" />Settings</a>
+      </Menu.Item>
+    }
     <Menu.Item key="1">
       <a href="#"><AiOutlineCreditCard className="mr-3" />Billing</a>
     </Menu.Item>
@@ -131,4 +153,4 @@ const menu = (
       <SignOut />
     </Menu.Item>
   </Menu>
-);
+)

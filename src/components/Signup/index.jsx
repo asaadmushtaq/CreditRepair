@@ -1,11 +1,11 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer } from "react-toastify";
-import { PATH ,ROLE} from "../../config";
+import { PATH, ROLE } from "../../config";
 import { Link, useHistory } from "react-router-dom";
 import { Form } from "react-bootstrap";
-import { FaEnvelope, FaLock,FaRegAddressCard } from "react-icons/fa"
-import { IMAGES,Loader,ErrorMessage } from "../../assets";
+import { FaEnvelope, FaLock, FaRegAddressCard } from "react-icons/fa"
+import { IMAGES, Loader, ErrorMessage } from "../../assets";
 import { BsArrowRight } from "react-icons/bs";
 import { toast } from 'react-toastify';
 import { Register } from "../../redux/actions";
@@ -20,8 +20,8 @@ import {
 export default function Signup() {
   let history = useHistory();
   let dispatch = useDispatch();
-  const {roleId}=useParams();
-   let user_Data = useSelector((state) => state.register);
+  const { roleId } = useParams();
+  let user_Data = useSelector((state) => state.register);
   const [cookies, setCookies] = useCookies();
   console.log(cookies)
   const { register, handleSubmit, errors } = useForm();
@@ -31,18 +31,18 @@ export default function Signup() {
   }, []);
   function onSubmit(data) {
     console.log(data);
-  data={...data,roleId:parseInt(roleId)}
-    dispatch(Register(data, setCookiesforUser, Notificiation,setUserID))
+    data = { ...data, roleId: parseInt(roleId) }
+    dispatch(Register(data, setCookiesforUser, Notificiation, setUserID))
     // history.push(PATH.LOGIN);
   }
   function setCookiesforUser(data) {
     Notificiation()
     debugger
-    data = { ...data, role: data.roleId === 1 ? ROLE.CLIENT : data.roleId === 2 ? ROLE.BUSINESS:'pharmacy'}
+    data = { ...data, role: data.roleId === 1 ? ROLE.CLIENT : data.roleId === 2 ? ROLE.BUSINESS : 'pharmacy' }
     setCookies("credit_repair_user", data)
   }
   function Notificiation(data, condition) {
-  debugger
+    debugger
     condition === "error" ?
       toast.error(data, {
         position: "top-right",
@@ -63,7 +63,7 @@ export default function Signup() {
         draggable: true,
         progress: undefined,
       })
-      
+
   }
   function setUserID(userID) {
     console.log(userID)
@@ -79,124 +79,124 @@ export default function Signup() {
         &&
         <ErrorMessage message={user_Data.registerError} />
       }
-    {
+      {
         userRegisterId > 0
         &&
         <OtpComponent />
       }
 
-         {
-         userRegisterId === 0
+      {
+        userRegisterId === 0
         &&
-      <div className="limiter">
+        <div className="limiter">
 
-        <div className="container-login100">
-          {/* <div className="cr__navbar-links_logo">
+          <div className="container-login100">
+            {/* <div className="cr__navbar-links_logo">
           <img src={IMAGES.CREDITREPAIR} alt="" />
         </div> */}
-          <div className="wrap-login100">
-            <div className="login100-pic js-tilt" data-tilt>
-              <img src={IMAGES.LOGINLOGO} alt="IMG" />
-            </div>
-            <Form onSubmit={handleSubmit(onSubmit)} className="login100-form validate-form">
-              <div className="cr__navbar-links_logo mr-0 text-center mb-5">
-                <img src={IMAGES.CREDITREPAIR} className="img-fluid" alt="" />
+            <div className="wrap-login100">
+              <div className="login100-pic js-tilt" data-tilt>
+                <img src={IMAGES.LOGINLOGO} alt="IMG" />
               </div>
-              <span className="login100-form-title pb-3">
-                Member Sign up
-              </span>
-              <div className="wrap-input100 validate-input">
-                <input
-                  type="text"
-                  name="firstname"
-                  placeholder="First Name"
-                  className="input100"
-                  style={{
-                    borderColor: errors && errors.firstname ? "#a80000" : "",
-                  }}
-                  ref={register({ required: true })}
-                />
-
-                <span className="focus-input100" />
-                <span className="symbol-input100">
-                  <FaRegAddressCard />
-                </span>
-              </div>
-              <div className="wrap-input100 validate-input">
-                <input
-                  type="text"
-                  name="lastname"
-                  placeholder="Last NAME"
-                  className="input100"
-                  style={{
-                    borderColor: errors && errors.lastname ? "#a80000" : "",
-                  }}
-                  ref={register({ required: true })}
-                />
-
-                <span className="focus-input100" />
-                <span className="symbol-input100">
-                  <FaRegAddressCard />
-                </span>
-              </div>
-              <div className="wrap-input100 validate-input">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                  className="input100"
-                  style={{
-                    borderColor: errors && errors.email ? "#a80000" : "",
-                  }}
-                  ref={register({ required: true })}
-                />
-
-                <span className="focus-input100" />
-                <span className="symbol-input100">
-                  <FaEnvelope />
-                </span>
-              </div>
-              <div className="wrap-input100 validate-input">
-                <input
-                  type="password"
-                  placeholder="Password"
-                  name="passwordHash"
-                  className="input100"
-                  style={{
-                    borderColor: errors && errors.password ? "#a80000" : "",
-                  }}
-                  ref={register({ required: true })}
-                />
-
-                <span className="focus-input100" />
-                <span className="symbol-input100">
-                  <FaLock />
-                </span>
-              </div>
-              <div className="container-login100-form-btn">
-              {
-                  user_Data
-                    &&
-                    user_Data.registerLoading === true
-                    ?
-                    <Loader />
-                    :
-                <button type="submit" className="login100-form-btn">
-                  Sign Up
-                </button>
-}
-              </div>
-              <div className="text-center p-t-136">
-                <div className="txt2">
-                  Already have an account? <Link to={PATH.LOGIN}> Log in</Link>
-                  <BsArrowRight className="m-l-5" />
+              <Form onSubmit={handleSubmit(onSubmit)} className="login100-form validate-form">
+                <div className="cr__navbar-links_logo mr-0 text-center mb-5">
+                  <img src={IMAGES.CREDITREPAIR} className="img-fluid" alt="" />
                 </div>
-              </div>
-            </Form>
+                <span className="login100-form-title pb-3">
+                  Member Sign up
+                </span>
+                <div className="wrap-input100 validate-input">
+                  <input
+                    type="text"
+                    name="firstname"
+                    placeholder="First Name"
+                    className="input100"
+                    style={{
+                      borderColor: errors && errors.firstname ? "#a80000" : "",
+                    }}
+                    ref={register({ required: true })}
+                  />
+
+                  <span className="focus-input100" />
+                  <span className="symbol-input100">
+                    <FaRegAddressCard />
+                  </span>
+                </div>
+                <div className="wrap-input100 validate-input">
+                  <input
+                    type="text"
+                    name="lastname"
+                    placeholder="Last Name"
+                    className="input100"
+                    style={{
+                      borderColor: errors && errors.lastname ? "#a80000" : "",
+                    }}
+                    ref={register({ required: true })}
+                  />
+
+                  <span className="focus-input100" />
+                  <span className="symbol-input100">
+                    <FaRegAddressCard />
+                  </span>
+                </div>
+                <div className="wrap-input100 validate-input">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    className="input100"
+                    style={{
+                      borderColor: errors && errors.email ? "#a80000" : "",
+                    }}
+                    ref={register({ required: true })}
+                  />
+
+                  <span className="focus-input100" />
+                  <span className="symbol-input100">
+                    <FaEnvelope />
+                  </span>
+                </div>
+                <div className="wrap-input100 validate-input">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    name="passwordHash"
+                    className="input100"
+                    style={{
+                      borderColor: errors && errors.password ? "#a80000" : "",
+                    }}
+                    ref={register({ required: true })}
+                  />
+
+                  <span className="focus-input100" />
+                  <span className="symbol-input100">
+                    <FaLock />
+                  </span>
+                </div>
+                <div className="container-login100-form-btn">
+                  {
+                    user_Data
+                      &&
+                      user_Data.registerLoading === true
+                      ?
+                      <Loader />
+                      :
+                      <button type="submit" className="login100-form-btn">
+                        Sign Up
+                      </button>
+                  }
+                </div>
+                <div className="text-center p-t-136">
+                  <div className="txt2">
+                    Already have an account? <Link to={PATH.LOGIN}> Log in</Link>
+                    <BsArrowRight className="m-l-5" />
+                  </div>
+                </div>
+              </Form>
+            </div>
           </div>
         </div>
-      </div>
-}
+      }
     </React.Fragment>
   );
 }

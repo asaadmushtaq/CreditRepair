@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
-import { FieldError,  Loader ,ErrorMessage} from "../../assets";
+import { FieldError, Loader, ErrorMessage } from "../../assets";
 import { useCookies } from "react-cookie";
 import { PATH } from "../../config";
 import { Link, useHistory } from "react-router-dom";
 import { Form } from "react-bootstrap";
 import { FaEnvelope, FaLock } from "react-icons/fa"
-import {  ROLE } from "./../../config";
+import { ROLE } from "./../../config";
 import { useDispatch, useSelector } from "react-redux";
 import { IMAGES } from "../../assets";
 import { BsArrowRight } from "react-icons/bs";
@@ -30,13 +30,12 @@ export default function Login() {
     setCookies("credit_repair_user", data)
   }
   function onSubmit(data) {
-    console.log("login from console",data)
-   data.roleId=parseInt(data.roleId)
+    console.log("login from console", data)
+    data.roleId = parseInt(data.roleId)
     dispatch(AdminLogin(data, setCookiesforUser, Notificiation))
 
   }
   function Notificiation(data, condition) {
-    debugger
     condition === "error" ?
       toast.error(data, {
         position: "top-right",
@@ -93,9 +92,6 @@ export default function Login() {
                     <option>Select Role</option>
                     <option key={1} value="1">Client User</option>
                     <option key={2} value="2">Busniess User</option>
-                    {/* <option key={5} value="5" >Pharmacy User</option>
-                                    <option key={4} value="4" >Pharmacy Admin</option>
-                                    <option key={3} value="3" >Admin</option> */}
                   </select>
                   {
                     errors.roleId
@@ -109,7 +105,7 @@ export default function Login() {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email address"
+                  placeholder="Email Address"
                   className="input100"
                   style={{
                     borderColor: errors && errors.email ? "#a80000" : "",
@@ -140,16 +136,16 @@ export default function Login() {
                 </span>
               </div>
               <div className="container-login100-form-btn">
-              {
+                {
                   user_Data
                     &&
                     user_Data.adminloginLoading === true
                     ?
-                    <Loader />:
-                <button type="submit" className="login100-form-btn">
-                  Login
-                </button>
-}
+                    <Loader /> :
+                    <button type="submit" className="login100-form-btn">
+                      Login
+                    </button>
+                }
               </div>
               {/* <div className="text-center p-t-12">
                 <span className="txt1">

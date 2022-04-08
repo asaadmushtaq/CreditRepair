@@ -1,26 +1,82 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import {
   Form, Input, Checkbox, Row, Col, Select, Button,
 } from 'antd';
 import { allMonthList } from "./../../../config";
+import { ClientManageProfile, ClientGetProfile } from "../../../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { useAuth } from "../../../Navigation/Auth/ProvideAuth";
+import { FieldError, Loader, ErrorMessage } from "../../../assets";
 
 export default function AdminSettings() {
-  const { register, handleSubmit } = useForm();
-  function onSubmit() {
-
+  let auth = useAuth();
+  let dispatch = useDispatch();
+  let List = useSelector((state) => state.clientReducer);
+  useEffect(() => {
+    dispatch(ClientGetProfile(auth.credit_repair_user.userId));
+  }, [dispatch]);
+  return (
+    <>
+      {List &&
+        List.clientGetProfileLoading === true &&
+        List.clientGetProfileSuccess === false &&
+        List.clientGetProfileFailure === false && <Loader />}
+      {
+        List &&
+        List.clientGetProfileLoading === false &&
+        List.clientGetProfileSuccess === false &&
+        List.clientGetProfileFailure === true &&
+        <ErrorMessage message={List.clientGetProfileError} />
+      }
+      {
+        List &&
+        List.clientGetProfileLoading === false &&
+        List.clientGetProfileSuccess === true &&
+        List.clientGetProfileFailure === false &&
+        <AdminSettingsInfo list={List?.clientGetProfile} />
+      }
+    </>
+  );
+}
+function AdminSettingsInfo(props) {
+  let Save = useSelector((state) => state.clientReducer);
+  let dispatch = useDispatch();
+  const { register, handleSubmit, errors } = useForm();
+  function onFinish(data) {
+    let finalData = {
+      userId: props.userId,
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: props.email,
+      countryId: 0,
+      stateId: 0,
+      cityId: 0,
+      zipCode: data.zipCode,
+      primaryAddress: data.primaryAddress,
+      secondaryAddress: data.secondaryAddress,
+      dob: data.dob,
+      ssn: data.ssn,
+      userNameIdentity: data.userNameIdentity,
+      passwordIdentity: data.passwordIdentity
+    }
+    // dispatch(ClientManageProfile(finalData, notification));
+    console.log("data", data)
+  }
+  function notification(data) {
+    // toast.success(data, TOASTER_STYLING_VALUES)
   }
   function handleChange(value) {
     console.log(`Selected: ${value}`);
   }
+  console.log("props", props.list)
   return (
     <React.Fragment>
       <Form
+        name="basic"
         layout={"vertical"}
-        onSubmit={handleSubmit(onSubmit)}
-        initialValues={{
-          layout: "vertical",
-        }}
+        onFinish={onFinish}
+        initialValues={{ layout: "vertical" }}
         className="create_clients"
       >
         <div id="dash-content">
@@ -34,74 +90,70 @@ export default function AdminSettings() {
                   <h5 className="settings-header">Basic Info</h5>
                   <Row gutter={12}>
                     <Col className="gutter-row" span={6}>
-                      <Form.Item label="First Name">
+                      <Form.Item
+                        label="First Name"
+                        name="firstName"
+                      >
                         <Input
-                          name="FirstName"
-                          ref={register()}
+                          defaultValue={props?.list?.firstName}
+                        />
+                      </Form.Item>
+                    </Col>
+                    <Col className="gutter-row" span={6}>
+                      <Form.Item label="Last Name" name="lastName">
+                        <Input
 
+                          defaultValue={props?.list?.lastName}
                         />
                       </Form.Item>
                     </Col>
+                  </Row>
+                  <Row gutter={12}>
                     <Col className="gutter-row" span={6}>
-                      <Form.Item label="Last Name">
+                      <Form.Item label="Primary Address" name="primaryAddress">
                         <Input
-                          name="LastName"
-                          ref={register()}
 
-                        />
-                      </Form.Item>
-                    </Col>
-                  </Row>
-                  <Row gutter={12}>
-                    <Col className="gutter-row" span={6}>
-                      <Form.Item label="Address">
-                        <Input
-                          name="PrimaryAddress"
-                          ref={register()}
+                          defaultValue={props?.list?.primaryAddress}
                         />
                       </Form.Item>
                     </Col>
                     <Col className="gutter-row" span={6}>
-                      <Form.Item label="Address 2">
+                      <Form.Item label="Secondary Address" name="secondaryAddress">
                         <Input
-                          name="SecondaryAddress"
-                          ref={register()}
+                          defaultValue={props?.list?.secondaryAddress}
                         />
                       </Form.Item>
                     </Col>
                   </Row>
                   <Row gutter={12}>
                     <Col className="gutter-row" span={4}>
-                      <Form.Item label="City">
+                      <Form.Item label="City" name="cityId">
                         <Input
-                          name="city"
-                          ref={register()}
+                          defaultValue={props?.list?.cityName}
                         />
                       </Form.Item>
                     </Col>
                     <Col className="gutter-row" span={4}>
-                      <Form.Item label="State">
+                      <Form.Item label="State" name="stateId">
                         <Input
-                          name="state"
-                          ref={register()}
+                          defaultValue={props?.list?.stateName}
                         />
                       </Form.Item>
                     </Col>
                     <Col className="gutter-row" span={4}>
-                      <Form.Item label="Country">
+                      <Form.Item label="Country" name="countryId">
                         <Input
-                          name="Country"
-                          ref={register()}
+                          defaultValue={props?.list?.countryName}
                         />
                       </Form.Item>
                     </Col>
                   </Row>
                   <Row gutter={12}>
                     <Col className="gutter-row" span={6}>
-                      <Form.Item label="Zip Code">
+                      <Form.Item label="Zip Code" name="ZipCode">
                         <Input
-                          name="ZipCode"
-                          ref={register()}
+
+                          defaultValue={props?.list?.zipCode}
                         />
                       </Form.Item>
                     </Col>
@@ -109,7 +161,7 @@ export default function AdminSettings() {
                       <Form.Item label="Social Security Number">
                         <Input
                           name="SSN"
-                          ref={register()}
+                          defaultValue={props?.list?.ssn}
                         />
                       </Form.Item>
                     </Col>
@@ -120,7 +172,7 @@ export default function AdminSettings() {
                       <Form.Item label="Phone">
                         <Input
                           name="phone"
-                          ref={register()}
+                          defaultValue={props?.list?.phone}
                         />
                       </Form.Item>
                     </Col>
@@ -129,7 +181,7 @@ export default function AdminSettings() {
                         <Input
                           name="email"
                           disabled
-                          ref={register()}
+                          defaultValue={props?.list?.email}
                         />
                       </Form.Item>
                     </Col>
@@ -215,7 +267,7 @@ export default function AdminSettings() {
                   </Row>
                   <Row gutter={12}>
                     <Col className="gutter-row" span={3}>
-                      <Button type="submit" className="create_client_btn">
+                      <Button type="button" htmlType="submit" className="create_client_btn">
                         Save Basic Info
                       </Button>
                     </Col>

@@ -1,52 +1,75 @@
-import { Profiler } from "react";
-import { CLIENT_GET_PROFILE, CLIENT_MANAGE_PROFILE } from "../actions/utilities";
+import { CLIENT_USER } from "../actions/utilities";
 const INITIAL_STATE = {
+    clientManageProfileLoading: false,
+    clientManageProfileSuccess: false,
+    clientManageProfileFailure: false,
+    clientManageProfileError: null,
+    clientManageProfile: [],
 
-    getClientProfileLoading: false,
-    getClientProfileSuccess: false,
-    getClientProfileFailure: false,
-    getClientProfileError: null,
-    getClientProfile: Profile,
+    clientGetProfileLoading: false,
+    clientGetProfileSuccess: false,
+    clientGetProfileFailure: false,
+    clientGetProfileError: null,
+    clientGetProfile: [],
+};
 
-
-    manageClientProfileLoading: false,
-    manageClientProfileSuccess: false,
-    manageClientProfileFailure: false,
-    manageClientProfileError: null,
-    manageClientProfile: ProfileClient
-}
-
-export const getFilteredListReducers = (state = INITIAL_STATE, action) => {
+export const clientUserReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case CLIENT_GET_PROFILE.CLIENT_GET_PROFILE_REQUEST:
+        case CLIENT_USER.CLIENT_MANAGE_PROFILE_REQUEST:
             return {
                 ...state,
-                getClientProfileLoading: true,
-                getClientProfileSuccess: false,
-                getClientProfileFailure: false,
-                getClientProfileError: null,
-                getClientProfile: []
+                clientManageProfileLoading: true,
+                clientManageProfileSuccess: false,
+                clientManageProfileFailure: false,
+                clientManageProfileError: null,
+                clientManageProfile: [],
             };
-        case CLIENT_GET_PROFILE.CLIENT_GET_PROFILE_SUCCESS:
+        case CLIENT_USER.CLIENT_MANAGE_PROFILE_SUCCESS:
             return {
                 ...state,
-                getFilteredListLoading: false,
-                getFilteredListSuccess: true,
-                getFilteredListFailure: false,
-                getFilteredListError: null,
-                getFilteredList: action.payload,
-                getFilteredListReset: false,
+                clientManageProfileLoading: false,
+                clientManageProfileSuccess: true,
+                clientManageProfileFailure: false,
+                clientManageProfileError: null,
+                clientManageProfile: action.payload,
             };
-        case CLIENT_GET_PROFILE.CLIENT_GET_PROFILE_FAILURE:
+        case CLIENT_USER.CLIENT_MANAGE_PROFILE_FAILURE:
             return {
                 ...state,
-                getFilteredListLoading: false,
-                getFilteredListSuccess: false,
-                getFilteredListFailure: true,
-                getFilteredListError: action.payload,
-                getFilteredListReset: false,
+                clientManageProfileLoading: false,
+                clientManageProfileSuccess: false,
+                clientManageProfileFailure: true,
+                clientManageProfileError: action.payload,
             };
-            default:
-                return state;
-            }
-        };
+
+        case CLIENT_USER.CLIENT_GET_PROFILE_REQUEST:
+            return {
+                ...state,
+                clientGetProfileLoading: true,
+                clientGetProfileSuccess: false,
+                clientGetProfileFailure: false,
+                clientGetProfileError: null,
+                clientGetProfile: [],
+            };
+        case CLIENT_USER.CLIENT_GET_PROFILE_SUCCESS:
+            return {
+                ...state,
+                clientGetProfileLoading: false,
+                clientGetProfileSuccess: true,
+                clientGetProfileFailure: false,
+                clientGetProfileError: null,
+                clientGetProfile: action.payload,
+            };
+        case CLIENT_USER.CLIENT_GET_PROFILE_FAILURE:
+            return {
+                ...state,
+                clientGetProfileLoading: false,
+                clientGetProfileSuccess: false,
+                clientGetProfileFailure: true,
+                clientGetProfileError: action.payload,
+            };
+
+        default:
+            return state;
+    }
+};

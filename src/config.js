@@ -4,9 +4,6 @@ const ERROR = {
 const ROLE = {
   CLIENT: "CLIENT",
   BUSINESS: "BUSINESS"
-  // PHARMACY: "PharmacyAdmin",
-  // PHARMACYUSER: "Pharmacy",
-  // Admin: "Admin"
 };
 const PATH = {
   NOPAGE: "*",
@@ -33,53 +30,19 @@ const PATH = {
   DASHBOARD: "/dashboard",
 };
 
-// const baseUrl = "https://randoxapi.xevensolutions.com/api/";
-const baseUrl="https://creditcitibk.azurewebsites.net/api/";
+const baseUrl = "https://creditcitibk.azurewebsites.net/api/";
 const APP_SETTINGS = {
   API_PATH: {
-    LOGIN: {
-      login: baseUrl + "login/post",
-    },
     ADMINLOGIN: {
       adminLogin: baseUrl + "Login/login",
-      twoFaCode: baseUrl + "adminLogin/sendTwoFACode",
     },
     REGISTERATION: {
       register: baseUrl + "ClientUser/Signup",
-      optverify:baseUrl+"User/verifyCode"
+      optverify: baseUrl + "User/verifyCode"
     },
-    CLIENT_GET_FILTERED_LIST: {
-      getFilteredList: baseUrl + "client/getFilteredList",
-      getSingleOrList: baseUrl + "client/getSingleOrList?userId=",
-      getAllCountries: baseUrl + "country/getAll",
-      getApprovedCertificates: baseUrl + "report/getList",
-      clientResetPassword: baseUrl + "client/resetPassword",
-      getApprovedCertificatesSingle: baseUrl + "report/getSingle",
-      sendOriginal: baseUrl + "report/sendOriginal",
-      sendUpdated: baseUrl + "report/sendUpdated",
-    },
-    ADMINPROFILE: {
-      adminProfile: baseUrl + "admin/updateNameEmail",
-      updatePassword: baseUrl + "admin/updatePassword",
-      twofactor: baseUrl + "admin/changeTwoFAStatus",
-      sessionLogSave: baseUrl + "sessionLog/save",
-      sessionLogSingleDelete: baseUrl + "sessionLog/deleteSingle",
-      sessionLogDeleteAll: baseUrl + "sessionLog/deleteAll",
-      sessionLogList: baseUrl + "sessionLog/list",
-      isExist: baseUrl + "sessionLog/isExist",
-    },
-    ADDADMIN: {
-      addadmin: baseUrl + "admin/add",
-      deleteadmin: baseUrl + "admin/delete",
-      adminGetAllOrList: baseUrl + "admin/getSingleOrList?userId=",
-      changeActiveStatus: baseUrl + "admin/changeActiveBlockStatus",
-      filterTestReport: baseUrl + "testReport/filterTestReport",
-      testReportCount: baseUrl + "testReport/getTestReportCount",
-      changeAdminLevel: baseUrl + "admin/changeAdminLevel",
-      changeActiveBlockStatus: baseUrl + "testReport/changeActiveBlockStatus",
-      submitForReview: baseUrl + "testReport/submitForReview",
-      takeDecision: baseUrl + "testReport/takeDecision",
-      reActivateDevice: baseUrl + "testReport/reActivateDevice",
+    CLIENT_USER: {
+      clientManageProfile: baseUrl + "ClientUser/ManageProfile",
+      clientGetProfile: baseUrl + "ClientUser/GetClientProfile",
     },
   },
 };
@@ -146,4 +109,4 @@ const allMonthList =
       value: "December",
     }
   ]
-export { ERROR, PATH, APP_SETTINGS, allMonthList,ROLE };
+export { ERROR, PATH, APP_SETTINGS, allMonthList, ROLE };

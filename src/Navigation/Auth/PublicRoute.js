@@ -14,7 +14,7 @@ function PublicRoute({ children, ...rest }) {
         auth.credit_repair_user && auth.credit_repair_user.token ? (
           <Redirect
             to={{
-              pathname: PATH.ADMINDASHBOARD,
+              pathname: PATH.DASHBOARD,
               state: { from: location },
             }}
           />

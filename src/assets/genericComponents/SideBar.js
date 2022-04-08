@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import { PATH } from "../../config";
+import { PATH, ROLE } from "../../config";
 import { FaUserFriends } from "react-icons/fa";
 import { useAuth } from "../../Navigation/Auth/ProvideAuth";
 import { useCookies } from "react-cookie";
-import { FiLogOut } from "react-icons/fi";
+import { FiLogOut, FiHome } from "react-icons/fi";
 import { GoFile } from "react-icons/go";
 export default function Sidebar() {
   let history = useHistory();
@@ -34,11 +34,12 @@ export default function Sidebar() {
       <div className="sidebar-inner slimscroll">
         <div id="sidebar-menu" className="sidebar-menu">
           <ul>
-            {auth.credit_repair_user.user.roleid === 2 && (
+            {auth.credit_repair_user.role === ROLE.BUSINESS && (
               <>
                 <li
                   className={
-                    history.location.pathname === PATH.ADMINDASHBOARD ? "active" : ""
+                    history.location.pathname === PATH.DASHBOARD ||
+                      history.location.pathname === PATH.ADMINDASHBOARD ? "active" : ""
                   }
                 >
                   <Link
@@ -47,7 +48,7 @@ export default function Sidebar() {
                     }}
                   >
                     {" "}
-                    {/* <FiHome></FiHome> */}
+                    <FiHome></FiHome>
                     <span>Home</span>
                   </Link>
                 </li>
@@ -100,11 +101,12 @@ export default function Sidebar() {
               </>
             )}
 
-            {auth.credit_repair_user.userType === 1 && (
+            {auth.credit_repair_user.role === ROLE.CLIENT && (
               <>
                 <li
                   className={
-                    history.location.pathname === PATH.CLIENTDASHBOARD ? "active" : ""
+                    history.location.pathname === PATH.DASHBOARD ||
+                      history.location.pathname === PATH.CLIENTDASHBOARD ? "active" : ""
                   }
                 >
                   <Link
@@ -113,7 +115,7 @@ export default function Sidebar() {
                     }}
                   >
                     {" "}
-                    {/* <FiHome></FiHome> */}
+                    <FiHome></FiHome>
                     <span>Home</span>
                   </Link>
                 </li>
