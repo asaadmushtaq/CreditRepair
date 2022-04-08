@@ -12,11 +12,15 @@ import { Register } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useCookies } from 'react-cookie';
 import OtpComponent from "./OtpComponent";
+import {
+  useParams
+} from "react-router-dom"
 
 
 export default function Signup() {
   let history = useHistory();
   let dispatch = useDispatch();
+  const {roleId}=useParams();
    let user_Data = useSelector((state) => state.register);
   const [cookies, setCookies] = useCookies();
   console.log(cookies)
@@ -27,7 +31,7 @@ export default function Signup() {
   }, []);
   function onSubmit(data) {
     console.log(data);
-    data={...data,roleId:parseInt(1)}
+  data={...data,roleId:parseInt(roleId)}
     dispatch(Register(data, setCookiesforUser, Notificiation,setUserID))
     // history.push(PATH.LOGIN);
   }

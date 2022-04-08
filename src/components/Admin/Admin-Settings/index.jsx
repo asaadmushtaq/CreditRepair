@@ -36,16 +36,18 @@ export default function AdminSettings() {
                     <Col className="gutter-row" span={6}>
                       <Form.Item label="First Name">
                         <Input
-                          name="firstName"
+                          name="FirstName"
                           ref={register()}
+
                         />
                       </Form.Item>
                     </Col>
                     <Col className="gutter-row" span={6}>
                       <Form.Item label="Last Name">
                         <Input
-                          name="lastName"
+                          name="LastName"
                           ref={register()}
+
                         />
                       </Form.Item>
                     </Col>
@@ -54,7 +56,7 @@ export default function AdminSettings() {
                     <Col className="gutter-row" span={6}>
                       <Form.Item label="Address">
                         <Input
-                          name="address"
+                          name="PrimaryAddress"
                           ref={register()}
                         />
                       </Form.Item>
@@ -62,14 +64,14 @@ export default function AdminSettings() {
                     <Col className="gutter-row" span={6}>
                       <Form.Item label="Address 2">
                         <Input
-                          name="address 2"
+                          name="SecondaryAddress"
                           ref={register()}
                         />
                       </Form.Item>
                     </Col>
                   </Row>
                   <Row gutter={12}>
-                    <Col className="gutter-row" span={6}>
+                    <Col className="gutter-row" span={4}>
                       <Form.Item label="City">
                         <Input
                           name="city"
@@ -77,10 +79,18 @@ export default function AdminSettings() {
                         />
                       </Form.Item>
                     </Col>
-                    <Col className="gutter-row" span={6}>
+                    <Col className="gutter-row" span={4}>
                       <Form.Item label="State">
                         <Input
                           name="state"
+                          ref={register()}
+                        />
+                      </Form.Item>
+                    </Col>
+                    <Col className="gutter-row" span={4}>
+                      <Form.Item label="Country">
+                        <Input
+                          name="Country"
                           ref={register()}
                         />
                       </Form.Item>
@@ -90,7 +100,7 @@ export default function AdminSettings() {
                     <Col className="gutter-row" span={6}>
                       <Form.Item label="Zip Code">
                         <Input
-                          name="zipCode"
+                          name="ZipCode"
                           ref={register()}
                         />
                       </Form.Item>
@@ -98,7 +108,7 @@ export default function AdminSettings() {
                     <Col className="gutter-row" span={6}>
                       <Form.Item label="Social Security Number">
                         <Input
-                          name="socialSecurityNumber"
+                          name="SSN"
                           ref={register()}
                         />
                       </Form.Item>
@@ -178,7 +188,7 @@ export default function AdminSettings() {
                     <Col className="gutter-row" span={6}>
                       <Form.Item label="Username">
                         <Input
-                          name="Username"
+                          name="userNameIdentity"
                           placeholder="IdentityIQ Username"
                           ref={register()}
                         />
@@ -187,7 +197,7 @@ export default function AdminSettings() {
                     <Col className="gutter-row" span={6}>
                       <Form.Item label="Password">
                         <Input
-                          name="password"
+                          name="PasswordIdentity"
                           placeholder="IdentityIQ Password"
                           ref={register()}
                         />
