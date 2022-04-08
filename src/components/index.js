@@ -20,6 +20,7 @@ import PricingPlan from "./PricingPlan";
 import AdminSettings from "./Admin/Admin-Settings";
 
 import ClientDashboard from "./Client/client-dashboard";
+import Dashboard from "./Dashboard";
 
 // class DynamicImport extends React.Component {
 //   state = {
@@ -65,6 +66,7 @@ const WEB_PAGES = {
   BLOGHOMEPAGE: BlogHomepage,
   PRICINGPLAN: PricingPlan,
   ADMIN_SETTINGS: AdminSettings,
+  DASHBOARD: Dashboard,
 };
 
 export { WEB_PAGES };
