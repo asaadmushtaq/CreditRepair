@@ -34,7 +34,7 @@ export default function Sidebar() {
       <div className="sidebar-inner slimscroll">
         <div id="sidebar-menu" className="sidebar-menu">
           <ul>
-           {auth.credit_repair_user.user.roleid === 1 && (
+           {auth.credit_repair_user.user.roleid ===2 && (
               <>
                 <li
                   className={
@@ -100,7 +100,7 @@ export default function Sidebar() {
               </>
             )}
 
-{auth.credit_repair_user.userType === 2 && (
+{auth.credit_repair_user.userType === 1 && (
               <>
                 <li
                   className={
