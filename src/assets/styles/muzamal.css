@@ -5955,3 +5955,122 @@ section.space--sm {
   font-size: 20px;
   color: #fff;
 }
+
+.business-dashboard {
+  padding: 0 5%;
+}
+.business-dashboard h4 {
+  margin-bottom: 20px;
+}
+.dashboard-card {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.dashboard-card .emark {
+  position: absolute;
+  top: 0;
+  right: 7px;
+  margin: -1px;
+  border-top-right-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  height: 50px;
+  overflow: hidden;
+  line-height: 1;
+  padding-top: 7px;
+  padding-left: 20px;
+  text-align: center;
+  width: 50px;
+  vertical-align: middle;
+  z-index: 0;
+}
+
+.dashboard-card .emark:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  border: 55px solid transparent;
+  border-right-color: #b3383b;
+}
+.dashboard-card .dash-card-content  {
+  border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.dashboard-card .dash-card-content h6 {
+  font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
+.dashboard-card .dash-card-content p {
+  font-size: 12px;
+}
+.dashboard-card .dash-card-footer {
+
+}
+
+.dashboard-card .dash-card-footer .light-dash-button {
+  border: 1px solid #af2629;
+    text-transform: uppercase;
+  
+}
+
+.dashboard-card .dash-card-footer .light-dash-button:hover {
+  background-color: #af2629;
+  color: #fff;
+}
+
+.client-dashboard {
+
+}
+.client-dashboard .dashboard-card {
+  padding: 0px;
+  height: 200px;
+
+}
+.client-dashboard .global-content-header {
+  padding: 15px;
+}
+.client-dashboard .global-content-header h6 {
+  color: #fff;
+  margin: 0px;
+}
+
+.client-dashboard .dash-card-content {
+  padding: 15px;
+  border: 0px;
+  text-align: center;
+  margin: 0px;
+  margin-top: 20px;
+  
+}
+.client-dashboard .dash-card-content:last-child {
+  margin: 0px;
+  text-align: left;
+}
+
+.client-dashboard .dash-card-content h3 {
+  font-size: 65px;
+  
+}
+
+.header-red {
+  background: #ac330f;
+}
+.header-light-blue {
+  background: #14bfde;
+
+}
+.header-blue {
+  background: #066fde;
+}
+
+.header-green {
+  background: #54cc39;
+
+}

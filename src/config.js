@@ -7,6 +7,7 @@ const PATH = {
   LOGIN: "/login",
   SIGNUP: "/signup",
   ADMINDASHBOARD: "/admin-dashboard",
+  CLIENTDASHBOARD: "/client-dashboard",
   ADMIN_SETTINGS: "/admin-settings",
   ADMINCLIENTS: "/admin-clients",
   CREATENEWCLIENT: "/clients/new",
