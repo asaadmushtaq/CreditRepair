@@ -1,6 +1,13 @@
 const ERROR = {
   SYSTEM_ERROR: "System error. Please try again later!",
 };
+const ROLE = {
+  CLIENT: "CLIENT",
+  BUSINESS: "BUSINESS"
+  // PHARMACY: "PharmacyAdmin",
+  // PHARMACYUSER: "Pharmacy",
+  // Admin: "Admin"
+};
 const PATH = {
   NOPAGE: "*",
   HOMEPAGE: "/",
@@ -23,18 +30,20 @@ const PATH = {
   PRICINGPLAN: "/pricing-plan",
 };
 
-const baseUrl = "https://randoxapi.xevensolutions.com/api/";
+// const baseUrl = "https://randoxapi.xevensolutions.com/api/";
+const baseUrl="https://localhost:44388/api/";
 const APP_SETTINGS = {
   API_PATH: {
     LOGIN: {
       login: baseUrl + "login/post",
     },
     ADMINLOGIN: {
-      adminLogin: baseUrl + "adminLogin/adminLogin",
+      adminLogin: baseUrl + "Login/login",
       twoFaCode: baseUrl + "adminLogin/sendTwoFACode",
     },
     REGISTERATION: {
-      register: baseUrl + "registration/post",
+      register: baseUrl + "ClientUser/Signup",
+      optverify:baseUrl+"User/verifyCode"
     },
     CLIENT_GET_FILTERED_LIST: {
       getFilteredList: baseUrl + "client/getFilteredList",
@@ -134,4 +143,4 @@ const allMonthList =
       value: "December",
     }
   ]
-export { ERROR, PATH, APP_SETTINGS, allMonthList };
+export { ERROR, PATH, APP_SETTINGS, allMonthList,ROLE };
