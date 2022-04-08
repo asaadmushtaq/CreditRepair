@@ -28,7 +28,7 @@ export default function PricingPlan() {
               <div className="col-sm-12">
                 <div className="columns">
                   <ul className="price">
-                    <li className="Header" style={{ backgroundColor: '#00aeef' }}><strong>Monthly Package</strong></li>
+                    <li className="Header" style={{ backgroundColor: '#00aeef' }}><strong>Indvidual User Package</strong></li>
                     <li className="grey">
                       <h1><span style={{ color: '#ffffff' }}><strong>$ 249</strong></span></h1>
                       <p><span style={{ color: '#ffffff' }}>enrollment/audit fee</span></p>
@@ -46,12 +46,12 @@ export default function PricingPlan() {
                     <li>Money Back Guarantee if No Deletions in 120 Days</li>
                     <li>Unlimited Disputes</li>
                     <li className="grey">
-                      <Link to={PATH.LOGIN} className="get_started_button">GET STARTED TODAY!</Link></li>
+                      <Link to={PATH.SIGNUP} className="get_started_button">GET STARTED TODAY!</Link></li>
                   </ul>
                 </div>
                 <div className="columns">
                   <ul className="price">
-                    <li className="Header" style={{ backgroundColor: '#ffcc00' }}><strong>CELEBRITY Package</strong></li>
+                    <li className="Header" style={{ backgroundColor: '#ffcc00' }}><strong>Busniess User Package</strong></li>
                     <li className="grey">
                       <h1><span style={{ color: '#ffffff' }}><strong>$1999</strong></span></h1>
                       <p><span style={{ color: '#ffffff' }}>enrollment/audit fee</span></p>
@@ -70,8 +70,8 @@ export default function PricingPlan() {
                     <li>Unlimited Disputes</li>
                     <li><span style={{ color: '#00aeef' }}><strong>Same Letters. Same Results. But You'll Work Directly with the CEO (Ashley Massengill) LIMITED AVAILABILITY</strong></span></li>
                     <li className="grey">
-                      <Link to={PATH.LOGIN} className="get_started_button">
-                        GET STARTED TODAY!</Link></li>
+                    <Link to={PATH.SIGNUP} className="get_started_button">GET STARTED TODAY!</Link></li>
+
                   </ul>
                 </div>
               </div>

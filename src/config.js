@@ -12,7 +12,7 @@ const PATH = {
   NOPAGE: "*",
   HOMEPAGE: "/",
   LOGIN: "/login",
-  SIGNUP: "/signup",
+  SIGNUP: "/signup/:roleId",
   ADMINDASHBOARD: "/admin-dashboard",
   ADMIN_SETTINGS: "/admin-settings",
   ADMINCLIENTS: "/admin-clients",

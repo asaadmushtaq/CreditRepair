@@ -34,7 +34,10 @@ export default function Sidebar() {
       <div className="sidebar-inner slimscroll">
         <div id="sidebar-menu" className="sidebar-menu">
           <ul>
-            {auth.credit_repair_user.userType === "Admin" && (
+            {
+              console.log("auth.credit_repair_user.RoleId ", )
+            }
+            {auth.credit_repair_user.roleId === 1 && (
               <>
                 {/* <li
                   className={
