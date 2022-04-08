@@ -112,11 +112,14 @@ export function Header() {
   );
 }
 const menu = (
+
   <Menu>
+    
     <Menu.Item key="0">
-       {auth.credit_repair_user.userType === 1 && (
+
+      
       <a href={PATH.ADMIN_SETTINGS}><AiOutlineSetting className="mr-3" />Settings</a>
-      ) }
+  
     </Menu.Item>
     <Menu.Item key="1">
       <a href="#"><AiOutlineCreditCard className="mr-3" />Billing</a>
