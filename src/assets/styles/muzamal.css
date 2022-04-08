@@ -32,7 +32,10 @@
   justify-content: space-between;
   padding: 177px 130px 33px 95px;
 }
-
+.customset_emailtext{
+  font-size: 17px !important;
+    text-align: left !important;
+}
 .login100-pic {
   width: 316px;
 }
@@ -5956,6 +5959,9 @@ section.space--sm {
   color: #fff;
 }
 
+.select_cust{
+  padding-bottom: 11px !important; 
+}
 .business-dashboard {
   padding: 0 5%;
 }

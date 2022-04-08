@@ -1,25 +1,93 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer } from "react-toastify";
-import { PATH } from "../../config";
+import { PATH ,ROLE} from "../../config";
 import { Link, useHistory } from "react-router-dom";
 import { Form } from "react-bootstrap";
-import { FaEnvelope, FaLock } from "react-icons/fa"
-import { IMAGES } from "../../assets";
+import { FaEnvelope, FaLock,FaRegAddressCard } from "react-icons/fa"
+import { IMAGES,Loader,ErrorMessage } from "../../assets";
 import { BsArrowRight } from "react-icons/bs";
+import { toast } from 'react-toastify';
+import { Register } from "../../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { useCookies } from 'react-cookie';
+import OtpComponent from "./OtpComponent";
+import {
+  useParams
+} from "react-router-dom"
+
 
 export default function Signup() {
   let history = useHistory();
+  let dispatch = useDispatch();
+  const {roleId}=useParams();
+   let user_Data = useSelector((state) => state.register);
+  const [cookies, setCookies] = useCookies();
+  console.log(cookies)
   const { register, handleSubmit, errors } = useForm();
+  const [userRegisterId, setUserRegisterId] = useState(0);
   useEffect(() => {
     document.title = "Signup | Credt Repair";
   }, []);
-  function onSubmit() {
-    history.push(PATH.LOGIN);
+  function onSubmit(data) {
+    console.log(data);
+  data={...data,roleId:parseInt(roleId)}
+    dispatch(Register(data, setCookiesforUser, Notificiation,setUserID))
+    // history.push(PATH.LOGIN);
+  }
+  function setCookiesforUser(data) {
+    Notificiation()
+    debugger
+    data = { ...data, role: data.roleId === 1 ? ROLE.CLIENT : data.roleId === 2 ? ROLE.BUSINESS:'pharmacy'}
+    setCookies("credit_repair_user", data)
+  }
+  function Notificiation(data, condition) {
+  debugger
+    condition === "error" ?
+      toast.error(data, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+      :
+      toast.success(data, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+      
+  }
+  function setUserID(userID) {
+    console.log(userID)
+    setUserRegisterId(userID);
   }
   return (
     <React.Fragment>
       <ToastContainer />
+      {
+        user_Data
+        &&
+        user_Data.registerFailure === true
+        &&
+        <ErrorMessage message={user_Data.registerError} />
+      }
+    {
+        userRegisterId > 0
+        &&
+        <OtpComponent />
+      }
+
+         {
+         userRegisterId === 0
+        &&
       <div className="limiter">
 
         <div className="container-login100">
@@ -37,6 +105,40 @@ export default function Signup() {
               <span className="login100-form-title pb-3">
                 Member Sign up
               </span>
+              <div className="wrap-input100 validate-input">
+                <input
+                  type="text"
+                  name="firstname"
+                  placeholder="First Name"
+                  className="input100"
+                  style={{
+                    borderColor: errors && errors.firstname ? "#a80000" : "",
+                  }}
+                  ref={register({ required: true })}
+                />
+
+                <span className="focus-input100" />
+                <span className="symbol-input100">
+                  <FaRegAddressCard />
+                </span>
+              </div>
+              <div className="wrap-input100 validate-input">
+                <input
+                  type="text"
+                  name="lastname"
+                  placeholder="Last NAME"
+                  className="input100"
+                  style={{
+                    borderColor: errors && errors.lastname ? "#a80000" : "",
+                  }}
+                  ref={register({ required: true })}
+                />
+
+                <span className="focus-input100" />
+                <span className="symbol-input100">
+                  <FaRegAddressCard />
+                </span>
+              </div>
               <div className="wrap-input100 validate-input">
                 <input
                   type="email"
@@ -58,7 +160,7 @@ export default function Signup() {
                 <input
                   type="password"
                   placeholder="Password"
-                  name="password"
+                  name="passwordHash"
                   className="input100"
                   style={{
                     borderColor: errors && errors.password ? "#a80000" : "",
@@ -72,9 +174,17 @@ export default function Signup() {
                 </span>
               </div>
               <div className="container-login100-form-btn">
+              {
+                  user_Data
+                    &&
+                    user_Data.registerLoading === true
+                    ?
+                    <Loader />
+                    :
                 <button type="submit" className="login100-form-btn">
                   Sign Up
                 </button>
+}
               </div>
               <div className="text-center p-t-136">
                 <div className="txt2">
@@ -86,7 +196,7 @@ export default function Signup() {
           </div>
         </div>
       </div>
-
+}
     </React.Fragment>
   );
 }

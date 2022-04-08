@@ -1,10 +1,16 @@
-import { REGISTRATION } from "../actions/utilities";
+import { REGISTRATION ,OPT} from "../actions/utilities";
 const INITIAL_STATE = {
     registerLoading: false,
     registerSuccess: false,
     registerFailure: false,
     registerError: null,
     register: [],
+//OPT VERIFY
+    optLoading: false,
+    optSuccess: false,
+    optFailure: false,
+    optError: null,
+    opt: [],
 }
 
 export const submitRegister = (state = INITIAL_STATE, action) => {
@@ -35,6 +41,34 @@ export const submitRegister = (state = INITIAL_STATE, action) => {
                 registerFailure: true,
                 registerError: action.payload,
             };
+            //opt
+
+            case REGISTRATION.OPT_REQUEST:
+                return {
+                    ...state,
+                    optLoading: true,
+                    optSuccess: false,
+                    optFailure: false,
+                    optError: null,
+                    opt: [],
+                };
+            case REGISTRATION.OPT_SUCCESS:
+                return {
+                    ...state,
+                    optLoading: false,
+                    optSuccess: true,
+                    optFailure: false,
+                    optError: null,
+                    opt: action.payload,
+                };
+            case OPT.OPT_FAILURE:
+                return {
+                    ...state,
+                    optLoading: false,
+                    optSuccess: false,
+                    optFailure: true,
+                    optError: action.payload,
+                };
         default:
             return state;
     }
