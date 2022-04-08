@@ -33,7 +33,7 @@ const PATH = {
 };
 
 // const baseUrl = "https://randoxapi.xevensolutions.com/api/";
-const baseUrl="https://localhost:44388/api/";
+const baseUrl="https://creditcitibk.azurewebsites.net/api/";
 const APP_SETTINGS = {
   API_PATH: {
     LOGIN: {
