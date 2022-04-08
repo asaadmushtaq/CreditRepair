@@ -26,6 +26,9 @@ export const RouterConfig = () => {
         <PrivateRoute exact path={PATH.ADMINDASHBOARD}>
           <WEB_PAGES.ADMINDASHBOARD />
         </PrivateRoute>
+        <PrivateRoute exact path={PATH.ADMIN_SETTINGS}>
+          <WEB_PAGES.ADMIN_SETTINGS />
+        </PrivateRoute>
         <PrivateRoute exact path={PATH.ADMINCLIENTS}>
           <WEB_PAGES.ADMINCLIENTS />
         </PrivateRoute>
