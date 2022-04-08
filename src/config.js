@@ -14,6 +14,7 @@ const PATH = {
   LOGIN: "/login",
   SIGNUP: "/signup/:roleId",
   ADMINDASHBOARD: "/admin-dashboard",
+  CLIENTDASHBOARD: "/client-dashboard",
   ADMIN_SETTINGS: "/admin-settings",
   ADMINCLIENTS: "/admin-clients",
   CREATENEWCLIENT: "/clients/new",

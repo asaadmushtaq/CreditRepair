@@ -19,6 +19,8 @@ import BlogHomepage from "./BlogHomepage";
 import PricingPlan from "./PricingPlan";
 import AdminSettings from "./Admin/Admin-Settings";
 
+import ClientDashboard from "./Client/client-dashboard";
+
 // class DynamicImport extends React.Component {
 //   state = {
 //     component: null,
@@ -46,6 +48,7 @@ const WEB_PAGES = {
   LOGIN: login,
   SIGNUP: Signup,
   ADMINDASHBOARD: AdminDashboard,
+  CLIENTDASHBOARD: ClientDashboard,
   ADMINCLIENTS: AdminClients,
   ADMINLETTERLIBRARY: AdminLetterLibrary,
   CREATENEWCLIENT: CreateNewClient,
