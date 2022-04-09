@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer } from "react-toastify";
-import { PATH, ROLE } from "../../config";
-import { Link, useHistory } from "react-router-dom";
+import { PATH, ROLE, TOASTER_STYLING_VALUES } from "../../config";
+import { Link } from "react-router-dom";
 import { Form } from "react-bootstrap";
 import { FaEnvelope, FaLock, FaRegAddressCard } from "react-icons/fa"
 import { IMAGES, Loader, ErrorMessage } from "../../assets";
@@ -18,7 +18,6 @@ import {
 
 
 export default function Signup() {
-  let history = useHistory();
   let dispatch = useDispatch();
   const { roleId } = useParams();
   let user_Data = useSelector((state) => state.register);
@@ -33,40 +32,20 @@ export default function Signup() {
     console.log(data);
     data = { ...data, roleId: parseInt(roleId) }
     dispatch(Register(data, setCookiesforUser, Notificiation, setUserID))
-    history.push(PATH.LOGIN);
   }
   function setCookiesforUser(data) {
     Notificiation()
-    debugger
     data = { ...data, role: data.roleId === 1 ? ROLE.CLIENT : data.roleId === 2 ? ROLE.BUSINESS : 'pharmacy' }
     setCookies("credit_repair_user", data)
   }
   function Notificiation(data, condition) {
-    debugger
     condition === "error" ?
-      toast.error(data, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      })
+      toast.error(data, TOASTER_STYLING_VALUES)
       :
-      toast.success(data, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      })
+      toast.success(data, TOASTER_STYLING_VALUES)
 
   }
   function setUserID(userID) {
-    console.log(userID)
     setUserRegisterId(userID);
   }
   return (

@@ -7,7 +7,7 @@ import { allMonthList } from "./../../../config";
 import { ClientManageProfile, ClientGetProfile } from "../../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useAuth } from "../../../Navigation/Auth/ProvideAuth";
-import { FieldError, Loader, ErrorMessage } from "../../../assets";
+import { Loader, ErrorMessage } from "../../../assets";
 
 export default function AdminSettings() {
   let auth = useAuth();
@@ -42,7 +42,7 @@ export default function AdminSettings() {
 function AdminSettingsInfo(props) {
   let Save = useSelector((state) => state.clientReducer);
   let dispatch = useDispatch();
-  const { register, handleSubmit, errors } = useForm();
+  const { register } = useForm();
   function onFinish(data) {
     let finalData = {
       userId: props.userId,

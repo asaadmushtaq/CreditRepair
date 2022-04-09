@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { PATH } from "../../config";
 import { FooterComponent } from "../HomePage";
 import Navbar from "../HomePage/Navbar";
 export default function PricingPlan() {
@@ -46,7 +45,7 @@ export default function PricingPlan() {
                     <li>Money Back Guarantee if No Deletions in 120 Days</li>
                     <li>Unlimited Disputes</li>
                     <li className="grey">
-                      <Link to={{ pathname: `/signup/1`}} className="get_started_button">GET STARTED TODAY!</Link></li>
+                      <Link to={{ pathname: `/signup/1` }} className="get_started_button">GET STARTED TODAY!</Link></li>
                   </ul>
                 </div>
                 <div className="columns">
@@ -70,7 +69,7 @@ export default function PricingPlan() {
                     <li>Unlimited Disputes</li>
                     <li><span style={{ color: '#00aeef' }}><strong>Same Letters. Same Results. But You'll Work Directly with the CEO (Ashley Massengill) LIMITED AVAILABILITY</strong></span></li>
                     <li className="grey">
-                    <Link to={{ pathname: `/signup/2`}} className="get_started_button">GET STARTED TODAY!</Link></li>
+                      <Link to={{ pathname: `/signup/2` }} className="get_started_button">GET STARTED TODAY!</Link></li>
 
                   </ul>
                 </div>

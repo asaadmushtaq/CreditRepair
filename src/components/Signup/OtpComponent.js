@@ -1,17 +1,18 @@
-import { FormControl, FormGroup } from "react-bootstrap";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { ErrorMessage, FieldError, Loader ,IMAGES} from "../../assets";
+import { ErrorMessage, Loader ,IMAGES} from "../../assets";
 import { ToastContainer, toast } from 'react-toastify';
 import { useAuth } from "../../Navigation/Auth/ProvideAuth";
 import { useDispatch, useSelector } from "react-redux";
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { Form } from "react-bootstrap";
-import { PATH } from "../../config";
-import { FaEnvelope, FaLock,FaRegAddressCard } from "react-icons/fa"
+import { PATH, TOASTER_STYLING_VALUES } from "../../config";
+import { FaRegAddressCard } from "react-icons/fa"
 import { OptVerifyUser } from "../../redux/actions";
+import { useHistory } from "react-router-dom";
 export default function OtpComponent() {
+  let history = useHistory();
     let auth = useAuth();
     let dispatch = useDispatch();
     let user_Data = useSelector((state) => state.register);
@@ -20,31 +21,22 @@ export default function OtpComponent() {
       // 
         data = { ...data, roleId: 1, userId: auth.credit_repair_user.userId }
         console.log(data);
-        dispatch(OptVerifyUser(data, Notificiation))
+        dispatch(OptVerifyUser(data, Notificiation, moveToNext))
+    }
+    function moveToNext() {
+      setTimeout(
+        function () {
+          history.push(PATH.LOGIN);
+        }
+          .bind(this),
+        2000
+      );
     }
     function Notificiation(data, condition) {
-
             condition === "error" ?
-                toast.error(data, {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                })
+                toast.error(data, TOASTER_STYLING_VALUES)
                 :
-                toast.success(data, {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                })
-
+                toast.success(data,TOASTER_STYLING_VALUES)
     }
     return (
         <>
@@ -60,9 +52,6 @@ export default function OtpComponent() {
             <div className="limiter">
 
 <div className="container-login100">
-  {/* <div className="cr__navbar-links_logo">
-  <img src={IMAGES.CREDITREPAIR} alt="" />
-</div> */}
   <div className="wrap-login100">
     <div className="login100-pic js-tilt" data-tilt>
       <img src={IMAGES.LOGINLOGO} alt="IMG" />

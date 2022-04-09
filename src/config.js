@@ -109,4 +109,13 @@ const allMonthList =
       value: "December",
     }
   ]
-export { ERROR, PATH, APP_SETTINGS, allMonthList, ROLE };
+const TOASTER_STYLING_VALUES = {
+  position: "top-right",
+  autoClose: 3000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+};
+export { ERROR, PATH, APP_SETTINGS, allMonthList, ROLE, TOASTER_STYLING_VALUES };

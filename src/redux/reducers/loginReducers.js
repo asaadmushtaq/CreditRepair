@@ -5,12 +5,6 @@ const INITIAL_STATE = {
   adminloginFailure: false,
   adminloginError: null,
   adminlogin: [],
-
-  twoFaCodeLoading: false,
-  twoFaCodeSuccess: false,
-  twoFaCodeFailure: false,
-  twoFaCodeError: null,
-  twoFaCode: [],
 };
 
 export const adminLoginReducers = (state = INITIAL_STATE, action) => {
@@ -41,36 +35,7 @@ export const adminLoginReducers = (state = INITIAL_STATE, action) => {
         adminloginFailure: true,
         adminloginError: action.payload,
       };
-    case ADMIN_LOGIN.TWO_FA_CODE_REQUEST:
-      return {
-        ...state,
-        twoFaCodeLoading: true,
-        twoFaCodeSuccess: false,
-        twoFaCodeFailure: false,
-        twoFaCodeError: null,
-        twoFaCode: [],
-      };
-    case ADMIN_LOGIN.TWO_FA_CODE_SUCCESS:
-      let data = state.adminlogin;
-      data.twoFACode = action.payload
-  
-      return {
-        ...state,
-        twoFaCodeLoading: false,
-        twoFaCodeSuccess: true,
-        twoFaCodeFailure: false,
-        twoFaCodeError: null,
-        twoFaCode: action.payload,
-        adminlogin: data
-      };
-    case ADMIN_LOGIN.TWO_FA_CODE_FAILURE:
-      return {
-        ...state,
-        twoFaCodeLoading: false,
-        twoFaCodeSuccess: false,
-        twoFaCodeFailure: true,
-        twoFaCodeError: action.payload,
-      };
+
     default:
       return state;
   }

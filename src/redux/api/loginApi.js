@@ -11,7 +11,3 @@ export function adminLogin(data) {
         // }
     })
 }
-export function twoFaCode(email) {
-    return axios.get(`${APP_SETTINGS.API_PATH.ADMINLOGIN.twoFaCode}?email=${email}`)
-}
-

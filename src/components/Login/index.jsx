@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
-import { FieldError, Loader, ErrorMessage } from "../../assets";
+import { FieldError, Loader } from "../../assets";
 import { useCookies } from "react-cookie";
-import { PATH } from "../../config";
-import { Link, useHistory } from "react-router-dom";
+import { PATH, TOASTER_STYLING_VALUES } from "../../config";
+import { Link } from "react-router-dom";
 import { Form } from "react-bootstrap";
 import { FaEnvelope, FaLock } from "react-icons/fa"
 import { ROLE } from "./../../config";
@@ -13,12 +13,9 @@ import { IMAGES } from "../../assets";
 import { BsArrowRight } from "react-icons/bs";
 import { AdminLogin } from "../../redux/actions";
 export default function Login() {
-  let history = useHistory();
   let dispatch = useDispatch();
   let user_Data = useSelector((state) => state.adminlogin);
   const { register, handleSubmit, errors } = useForm();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
   const [cookies, setCookies] = useCookies();
   const [roleId, selectRole] = useState(null)
   console.log(cookies)
@@ -37,42 +34,16 @@ export default function Login() {
   }
   function Notificiation(data, condition) {
     condition === "error" ?
-      toast.error(data, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      })
+      toast.error(data, TOASTER_STYLING_VALUES)
       :
-      toast.success(data, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      })
+      toast.success(data, TOASTER_STYLING_VALUES)
   }
   return (
     <React.Fragment>
       <ToastContainer />
-      {/* {
-        user_Data
-        &&
-        user_Data.adminloginFailure === true
-        &&
-        <ErrorMessage message={user_Data.adminloginError} />
-      } */}
       <div className="limiter">
-
         <div className="container-login100">
-
           <div className="wrap-login100">
-
             <div className="login100-pic js-tilt" data-tilt>
               <img src={IMAGES.LOGINLOGO} alt="IMG" />
             </div>
@@ -129,7 +100,6 @@ export default function Login() {
                   }}
                   ref={register({ required: true })}
                 />
-
                 <span className="focus-input100" />
                 <span className="symbol-input100">
                   <FaLock />
@@ -156,7 +126,7 @@ export default function Login() {
                 </a>
               </div> */}
               <div className="text-center p-t-136">
-                <Link to={PATH.SIGNUP} className="txt2">
+                <Link to={PATH.PRICINGPLAN} className="txt2">
                   Create your Account
                   <BsArrowRight className="m-l-5" />
                 </Link>
